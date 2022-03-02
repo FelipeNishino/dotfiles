@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# add your autostart stuffs here
+
+# Add Background
+xwallpaper --zoom ~/.wallpapers/1.jpg &
+
+# Xresources
+xrdb merge ~/.Xresources
+
+# Set Layout to Latam
+# setxkbmap latam &
+
+# Disable Screensaver
+# xset -dpms s off &
+
+# Notify
+dunst -config ~/.config/dunst/dunstrc-dark-left &
+
+# Clipboard
+xclip &
+
+# Run compositor
+# picom &
+
+# run bar script and dwm ( do not remove this )
+~/.dwm/bar/./bar.sh &
+dwm
+ 
