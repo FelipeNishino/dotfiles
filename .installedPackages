@@ -43,6 +43,8 @@ ca-certificates-utils 20210603-1
 cairo 1.17.4-5
 cairomm 1.14.3-2
 cantarell-fonts 1:0.303.1-1
+catppuccin-gtk-theme 0.1.4-1
+cava 0.7.5-1
 cdparanoia 10.2-8
 clucene 2.3.3.4-11
 coreutils 9.0-2
@@ -76,6 +78,7 @@ enchant 2.3.2-1
 exiv2 0.27.5-1
 expat 2.4.6-1
 fakeroot 1.27-1
+feh 3.8-2
 ffmpeg 2:5.0-4
 ffmpeg4.4 4.4.1-4
 fftw 3.3.10-2
@@ -108,6 +111,7 @@ glibc 2.35-2
 glibmm 2.66.2-1
 glslang 11.7.1-3
 gmp 6.2.1-1
+gnome-themes-extra 3.28+r6+g45b1d457-1
 gnupg 2.2.32-2
 gnutls 3.7.3-1
 go 2:1.17.7-1
@@ -127,6 +131,7 @@ gst-plugins-bad-libs 1.20.0-2
 gst-plugins-base 1.20.0-2
 gst-plugins-base-libs 1.20.0-2
 gstreamer 1.20.0-2
+gtk-engine-murrine 0.98.2-4
 gtk-update-icon-cache 1:4.6.1-2
 gtk2 2.24.33-2
 gtk3 1:3.24.31-3
@@ -476,6 +481,7 @@ lua 5.4.4-1
 luajit 2.1.0.beta3.r384.g1d7b5029-1
 lv2 1.18.2-1
 lvm2 2.03.15-1
+lxappearance 0.6.3-4
 lxmenu-data 0.1.5-3
 lz4 1:1.9.3-2
 lzo 2.10-3
@@ -512,6 +518,8 @@ node-gyp 9.0.0-1
 nodejs 17.6.0-1
 nodejs-nopt 5.0.0-2
 noto-fonts 20201226-2
+noto-fonts-cjk 20220126-1
+noto-fonts-emoji 20211101-1
 npm 8.5.2-1
 npth 1.6-3
 nspr 4.33-1
@@ -634,6 +642,7 @@ qt5-x11extras 5.15.2-2
 qt5-xmlpatterns 5.15.2-2
 qtkeychain-qt5 0.13.2-1
 quazip-qt5 1.2-2
+ranger 1.9.3-4
 raptor 2.0.15-18
 rasqal 1:0.9.33-5
 rav1e 0.4.1-1
@@ -731,6 +740,7 @@ xcb-util-keysyms 0.4.0-3
 xcb-util-renderutil 0.3.9-3
 xcb-util-wm 0.4.1-3
 xclip 0.13-3
+xcolor 0.5.1-3
 xdg-dbus-proxy 0.1.3-1
 xdg-utils 1.1.3+19+g9816ebb-1
 xf86-input-libinput 1.2.1-1
@@ -751,6 +761,7 @@ xorg-xprop 1.2.5-1
 xorg-xrandr 1.5.1-2
 xorg-xrdb 1.2.1-1
 xorg-xset 1.2.4-2
+xorg-xsetroot 1.1.2-2
 xorgproto 2021.5-1
 xvidcore 1.3.7-2
 xwallpaper 0.7.3-2
