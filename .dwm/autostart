@@ -3,10 +3,11 @@
 # add your autostart stuffs here
 
 # Add Background
-xwallpaper --zoom ~/.wallpapers/1.jpg &
+# xwallpaper --zoom ~/.wallpapers/15.png &
+feh --bg-scale "15.png" &
 
 # Xresources
-xrdb merge ~/.Xresources
+xrdb merge ~/.Xresources &
 
 # Set Layout to Latam
 # setxkbmap latam &
@@ -15,11 +16,13 @@ xrdb merge ~/.Xresources
 # xset -dpms s off &
 
 # Notify
-dunst -config ~/.config/dunst/dunstrc-dark-left &
+# dunst -config ~/.config/dunst/dunstrc-dark-left &
 
 # Clipboard
 xclip &
 
+# Activate numlock
+xnumlock on &
 # Run compositor
 # picom &
 
