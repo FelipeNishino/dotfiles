@@ -3,8 +3,8 @@
 # add your autostart stuffs here
 
 # Add Background
-# xwallpaper --zoom ~/.wallpapers/15.png &
-feh --bg-scale "15.png" &
+# xwallpaper --center ~/.wallpapers/15.png &
+feh --bg-scale ~/.wallpapers/15.png &
 
 # Xresources
 xrdb merge ~/.Xresources &
