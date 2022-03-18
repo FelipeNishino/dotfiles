@@ -1,1 +1,13 @@
-.wallpapers/*
+.oh-my-zsh/.git
+.oh-my-zsh/.gitignore
+.oh-my-zsh/.github
+.oh-my-zsh/.gitpod.yml
+.oh-my-zsh/.gitpod.Dockerfile
+.oh-my-zsh/CONTRIBUTING.md
+.oh-my-zsh/CODE_OF_CONDUCT.md
+.oh-my-zsh/cache
+.oh-my-zsh/LICENSE.txt
+.oh-my-zsh/log
+.oh-my-zsh/README.md
+.oh-my-zsh/SECURITY.md
+
