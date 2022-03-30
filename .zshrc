@@ -1,5 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="${PATH}:/home/nishi/.local/share/applications"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -70,10 +71,11 @@ ZSH_THEME="arch"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-completions zsh-syntax-highlighting bgnotify)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting bgnotify)
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=8"
-setopt INC_APPEND_HISTORY
+# setopt INC_APPEND_HISTORY
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 source $ZSH/oh-my-zsh.sh
 
 # User configuration

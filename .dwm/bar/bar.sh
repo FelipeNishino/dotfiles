@@ -35,7 +35,7 @@ wlan() {
 network() {
   [ -n "$(nmcli -a | grep 'Wired connection')" ] && CONNAME="wired:"
   [ -n "$(nmcli -t -f active,ssid dev wifi | grep '^yes')" ] && CONNAME="wifi:"
-  PRIVATE=$(nmcli -a | grep 'inet4 192' | awk '{print $2}')
+  PRIVATE=$(nmcli -a | grep 'inet4' | awk '{print $2}')
 
   if [ "$CONNAME" = "" ]; then # we don't have a connection
     printf "^c$black^ ^b$blue^ 󰤭 ^d^%s" " ^c$blue^Disconnected"
@@ -46,7 +46,7 @@ network() {
 
 clock() {
   printf "^c$black^ ^b$darkblue^ 󱑆 "
-  printf "^c$black^^b$blue^ $(date '+%a %H:%M') "
+  printf "^c$black^^b$blue^ $(date '+%a %d, %H:%M') "
 }
 
 while true; do

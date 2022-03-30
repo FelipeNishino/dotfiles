@@ -2,6 +2,10 @@
 
 # add your autostart stuffs here
 
+# Display settings for my specific setup, change as needed
+xrandr --output DP-0 --mode 1920x1080 --rate 144 --pos 0x0 --output HDMI-0 --mode 1920x1080 --rate 144 --pos 1920x0 &
+# xrandr --output Virtual0 --mode 1920x1080 --rate 60 -- pos 0x0
+
 # Add Background
 # xwallpaper --center ~/.wallpapers/15.png &
 feh --bg-scale ~/.wallpapers/15.png &
@@ -16,16 +20,16 @@ xrdb merge ~/.Xresources &
 # xset -dpms s off &
 
 # Notify
-# dunst -config ~/.config/dunst/dunstrc-dark-left &
+dunst -config ~/.config/dunst/dunstrc-dark &
 
 # Clipboard
 xclip &
 
 # Activate numlock
-xnumlock on &
+numlockx on &
 # Run compositor
-# picom &
-
+picom &
+discord &
 # run bar script and dwm ( do not remove this )
 ~/.dwm/bar/./bar.sh &
 dwm
