@@ -1,7 +1,7 @@
 ! ST =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 ! transparency [0.1-0.9]
-st.alpha: 0.8
+st.alpha: 0.94
 
 ! inner padding
 st.borderpx: 15

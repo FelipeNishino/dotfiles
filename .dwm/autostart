@@ -41,6 +41,9 @@ numlockx on &
 # Run compositor
 picom &
 
+if [ -n "$(echo $DISPLAYCONFIG | grep "Virtual")" != "" ]; then
+	discord &
+fi
 # run bar script and dwm ( do not remove this )
 ~/.dwm/bar/./bar.sh &
 dwm
