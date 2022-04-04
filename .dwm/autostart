@@ -2,6 +2,21 @@
 
 # add your autostart stuffs here
 
+DISPLAYCONFIG=$(xrandr | grep "Virtual" | awk '{print $1}')
+
+if [ "$(echo $DISPLAYCONFIG | grep "Virtual")" != "" ]; then
+	if [ "$DISPLAYCONFIG" = "Virtual-1" ]; then 
+		xrandr --output Virtual-1 --mode 1920x1080
+	else
+		xrandr --newmode "1600x900_60.00" 118.25 1600 1696 1856 2112 900 903 908 934 -hsync +vsync
+		xrandr --addmode Virtual1 1600x900_60.00
+		xrandr --output Virtual1 --mode 1600x900_60.00
+	fi
+else
+	xrandr --output DP-1 --mode 1920x1080 --rate 144
+	xrandr --output HDMI-2 --mode 1920x1080 --rate 144
+fi
+
 # Add Background
 # xwallpaper --center ~/.wallpapers/15.png &
 feh --bg-scale ~/.wallpapers/15.png &
@@ -16,15 +31,15 @@ xrdb merge ~/.Xresources &
 # xset -dpms s off &
 
 # Notify
-# dunst -config ~/.config/dunst/dunstrc-dark-left &
+dunst -config ~/.config/dunst/dunstrc &
 
 # Clipboard
 xclip &
 
 # Activate numlock
-xnumlock on &
+numlockx on &
 # Run compositor
-# picom &
+picom &
 
 # run bar script and dwm ( do not remove this )
 ~/.dwm/bar/./bar.sh &

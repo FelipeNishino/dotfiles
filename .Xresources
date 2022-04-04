@@ -1,9 +1,31 @@
+! ST =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
 ! transparency [0.1-0.9]
 st.alpha: 0.8
 
 ! inner padding
 st.borderpx: 15
 st.font: Cascadia Code :pixelsize=15:antialias=true:autohint=true
+
+! DWM -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+dwm.font: "Cascadia Code :style=medium:size=12"
+dwm.dmenufont: "Cascadia Code :size=12"
+dwm.normbgcolor: "#222222"
+dwm.normbordercolor: "#444444"
+dwm.normfgcolor: "#BBBBBB"
+dwm.selbgcolor: "#FF0000"
+dwm.selbordercolor: "#005577"
+dwm.selfgcolor: "#FF0000"
+dwm.borderpx: 15
+!dwm.snap: 0
+!dwm.showbar: 0
+!dwm.topbar: 0
+!dwm.nmaster: 0
+!dwm.resizehints: 0
+!dwm.mfact: 0
+
+! GENERAL -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 *background: #1E1E28
 *foreground: #DADAE8

@@ -11,8 +11,8 @@ interval=0
 cpu() {
   cpu_val=$(grep -o "^[^ ]*" /proc/loadavg)
 
-  printf "^c$green^^b$black^ \uf2db "
-  printf "^c$green^^b$black^$cpu_val"
+  printf "^c$black^ ^b$green^ CPU"
+  printf "^c$white^ ^b$grey^ $cpu_val"
 }
 
 battery() {
@@ -21,8 +21,15 @@ battery() {
 }
 
 mem() {
-  printf "^c$pink^^b$black^\uf538 "
-  printf "^c$pink^$(free -h | awk '/^Mem/ { print $3 }' | sed s/i//g)"
+  printf "^c$blue^^b$black^  "
+  printf "^c$blue^ $(free -h | awk '/^Mem/ { print $3 }' | sed s/i//g)"
+}
+
+wlan() {
+	case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
+	up) printf "^c$black^ ^b$blue^ 󰤨 ^d^%s" " ^c$blue^Connected" ;;
+	down) printf "^c$black^ ^b$blue^ 󰤭 ^d^%s" " ^c$blue^Disconnected" ;;
+	esac
 }
 
 network() {
@@ -31,19 +38,15 @@ network() {
   PRIVATE=$(nmcli -a | grep 'inet4' | awk '{print $2}')
 
   if [ "$CONNAME" = "" ]; then # we don't have a connection
-    printf "^c$blue^^b$black^\ue1da^d^%s" " ^c$blue^Disconnected"
+    printf "^c$black^ ^b$blue^ 󰤭 ^d^%s" " ^c$blue^Disconnected"
   else # we have a connection
-	if [ "$CONNAME" = "wired:" ]; then
-    printf "^c$blue^^b$black^\uf796^d^%s" " ^c$blue^${PRIVATE}"
-else
-    printf "^c$blue^^b$black^\ue1d8^d^%s" " ^c$blue^${PRIVATE}"
-	fi
+    printf "^c$black^ ^b$blue^ 󰤨 ^d^%s" " ^c$blue^${CONNAME} ${PRIVATE}"
   fi
 }
 
 clock() {
-  #printf "^c$black^ ^b$purple^ 󱑆 "
-  printf "^c$black^^b$purple^ $(date '+%a, %H:%M') "
+  printf "^c$black^ ^b$darkblue^ 󱑆 "
+  printf "^c$black^^b$blue^ $(date '+%a %H:%M') "
 }
 
 while true; do
