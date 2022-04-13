@@ -11,8 +11,8 @@ interval=0
 cpu() {
   cpu_val=$(grep -o "^[^ ]*" /proc/loadavg)
 
-  printf "^c$green^^b$black^ \uf2db "
-  printf "^c$green^^b$black^$cpu_val"
+  printf "^c$darkblue^^b$black^ \uf2db "
+  printf "^c$darkblue^^b$black^$cpu_val"
 }
 
 battery() {
@@ -31,12 +31,12 @@ network() {
   PRIVATE=$(nmcli -a | grep 'inet4' | awk '{print $2}')
 
   if [ "$CONNAME" = "" ]; then # we don't have a connection
-    printf "^c$blue^^b$black^\ue1da^d^%s" " ^c$blue^Disconnected"
+    printf "^c$blue^^b$black^\ue1da^d^%s" " ^c$blue^^b$black^\Disconnected"
   else # we have a connection
 	if [ "$CONNAME" = "wired:" ]; then
-    printf "^c$blue^^b$black^\uf796^d^%s" " ^c$blue^${PRIVATE}"
+    printf "^c$blue^^b$black^\uf796^d^%s" "^c$blue^^b$black^ ${PRIVATE}"
 else
-    printf "^c$blue^^b$black^\ue1d8^d^%s" " ^c$blue^${PRIVATE}"
+    printf "^c$blue^^b$black^\ue1d8^d^%s" "^c$blue^^b$black^ ${PRIVATE}"
 	fi
   fi
 }
