@@ -2,26 +2,25 @@
 
 # add your autostart stuffs here
 
-DISPLAYCONFIG=$(xrandr | grep "Virtual" | awk '{print $1}')
-
-if [ "$(echo $DISPLAYCONFIG | grep "Virtual")" != "" ]; then
-	if [ "$DISPLAYCONFIG" = "Virtual-1" ]; then 
-		xrandr --output Virtual-1 --mode 1920x1080
-	else
+if [ -n "$(xrandr | grep "Virtual" | awk "{print {1}")" ]; then
+	if [ -n "$(echo $HOST_LOCATION)" ]; then
 		xrandr --newmode "1600x900_60.00" 118.25 1600 1696 1856 2112 900 903 908 934 -hsync +vsync
-		xrandr --addmode Virtual1 1600x900_60.00
-		xrandr --output Virtual1 --mode 1600x900_60.00
+		xrandr --addmode Virtual-1 1600x900_60.00
+		xrandr --output Virtual-1 --mode 1600x900_60.00
+	else
+		xrandr --output Virtual-1 --mode 1920x1080
 	fi
 else
-	if [ -n "$(xrandr | grep 'DP-0')" ]; then
-		xrandr --output DP-0 --mode 1920x1080 --rate 144
-		xrandr --output HDMI-0 --mode 1920x1080 --rate 144
-	fi
+		xrandr --output DP-0 --mode 1920x1080 --rate 144 --pos 0x0
+		xrandr --output HDMI-0 --mode 1920x1080 --rate 144 --pos 1920x0
 fi
 
 # Add Background
 # xwallpaper --center ~/.wallpapers/15.png &
 feh --bg-scale ~/.wallpapers/15.png &
+
+eval $(gnome-keyring-daemon --start)
+export SSH_AUTH_SOCK
 
 # Xresources
 xrdb merge ~/.Xresources &
@@ -43,7 +42,14 @@ numlockx on &
 # Run compositor
 picom &
 
+if [ -e "$(echo $HOST_LOCATION)" ]; then
+	discord &
+fi
+
+mullvad-vpn &
+bitwarden-desktop &
+
 # run bar script and dwm ( do not remove this )
 ~/.dwm/bar/./bar.sh &
-dwm
+exec dbus-launch dwm
  
