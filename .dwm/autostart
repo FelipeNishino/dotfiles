@@ -11,8 +11,10 @@ if [ -n "$(xrandr | grep "Virtual" | awk "{print {1}")" ]; then
 		xrandr --output Virtual-1 --mode 1920x1080
 	fi
 else
-		xrandr --output DP-0 --mode 1920x1080 --rate 144 --pos 0x0
-		xrandr --output HDMI-0 --mode 1920x1080 --rate 144 --pos 1920x0
+	if [ -e "$(echo $HOST_LOCATION)" ]; then
+		xrandr --output DP-1 --mode 1920x1080 --rate 144 --pos 0x0 --rotate inverted
+		xrandr --output HDMI-2 --mode 1920x1080 --rate 144 --pos 1920x0
+	fi
 fi
 
 # Add Background
@@ -23,10 +25,10 @@ eval $(gnome-keyring-daemon --start)
 export SSH_AUTH_SOCK
 
 # Xresources
-xrdb merge ~/.Xresources &
+xrdb merge ~/.Xresources
 
-# Set Layout to Latam
-# setxkbmap latam &
+# Set Layout to US international
+setxkbmap -layout us -variant alt-intl
 
 # Disable Screensaver
 # xset -dpms s off &
