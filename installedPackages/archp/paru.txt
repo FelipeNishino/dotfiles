@@ -1,0 +1,6 @@
+catppuccin-gtk-theme 0.1.4-1
+cava 0.7.5-1
+mullvad-vpn-bin 2022.1-1
+paru 1.10.0-1
+ttf-material-design-icons 4.0.0-1
+vscodium-bin 1.66.2-1
