@@ -43,7 +43,7 @@ else
 
 clock() {
   #printf "^c$black^ ^b$purple^ 󱑆 "
-  printf "^c$black^^b$purple^ $(date '+%a, %H:%M') "
+  printf "^c$black^^b$purple^ $(date '+%A, %b %d - %H:%M') "
 }
 
 while true; do
