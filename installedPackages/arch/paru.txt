@@ -1,0 +1,16 @@
+7-zip 21.07-1
+catppuccin-gtk-theme 0.1.4-1
+cava 0.7.5-1
+clion 1:2021.3.4-1
+clion-jre 1:2021.3.4-1
+hakuneko-desktop 6.1.7-1
+mullvad-vpn 2022.1-1
+nvm 0.39.1-1
+paru 1.9.3-1
+standardnotes-desktop 3.11.2-1
+systemd-numlockontty 0.1-12
+ttf-material-design-icons 4.0.0-1
+ttf-symbola 13.00-8
+uasm 2.52.r1.c612f83d97-3
+update-grub 0.0.1-7
+vscodium-bin 1.64.2-1
