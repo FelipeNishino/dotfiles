@@ -1,4 +1,0 @@
-#!/bin/bash
-xrandr --output DP-0 --mode 1920x1080 --rate 1444 --rotate inverted
-xrandr --output HDMI-0 --mode 1920x1080 --rate 1444 --right-of DP-0
-
