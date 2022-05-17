@@ -1,7 +1,9 @@
 ## Graphical environment
 
 X server will be used with the dwm WM, install the needed packages with the following command.  
-```sudo pacman -S xorg-server xinit xorg-xrdb feh dunst picom numlockx xclip dmenu imlib2 libxft libxinerama```
+```
+sudo pacman -S xorg-server xinit xorg-xrdb feh dunst picom numlockx xclip dmenu imlib2 libxft libxinerama
+```
 
 Each of the packages are explained bellow
 - xorg-xrdb: utility for using the .Xresources file, a tool for used for theming.
@@ -26,7 +28,9 @@ cd dwm
 ```
 
 - Make and install dwm
-```sudo make clean install```
+```
+sudo make clean install
+```
 
 My dwm fork uses st as a terminal emulator, so that is also needed. For st's installation, just repeat the steps for dwm.
 ```
@@ -40,18 +44,26 @@ sudo make clean install
 For the audio server, I prefer using pipewire, which is a newer graph-based framework for audio management
 
 - Install the base framework and compatibility for ALSA, jack and PulseAudio
-```sudo pacman -S pipewire pipewire{alsa,pulse,jack}```
+```
+sudo pacman -S pipewire pipewire{alsa,pulse,jack}
+```
 
 - Install the session manager
-```sudo pacman -S wireplumber```
+```
+sudo pacman -S wireplumber
+```
 
 ### Graphical front-ends
 
 - Helvum is a really basic package for managing your session's graphs
-```sudo pacman -S helvum```
+```
+sudo pacman -S helvum
+```
 
 - Pavucontrol can be used for managing volume levels and setting default devices
-```sudo pacman -S pavucontrol```
+```
+sudo pacman -S pavucontrol
+```
 
 ## Rustup
 
@@ -67,6 +79,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 git clone https://aur.archlinux.org/paru.git
 cd paru
 ```
+
 - Make and install Paru package with
 ```
 makepkg -si
@@ -75,31 +88,47 @@ makepkg -si
 ## Github
 
 - Generate an ssh-key for your github email
-```ssh-keygen -t ed25519 -C "your_email@example.com"```
+```
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
 
 - Ensure ssh-agent is running
-```eval "$(ssh-agent -s)"```
+```
+eval "$(ssh-agent -s)"
+```
 
 - Add tour newly generated key to you ssh-agent
-```ssh-add ~/.ssh/id_ed25519```
+```
+ssh-add ~/.ssh/id_ed25519
+```
 
 - Get your public key and add it to your github account
 
-```cat ~/.ssh/id_ed25519.pub```
+```
+cat ~/.ssh/id_ed25519.pub
+```
 
 - (Optional) Install lazygit for a nice TUI
-```sudo pacman -S lazygit```
+```
+sudo pacman -S lazygit
+```
 
 ## Sublime Text
 
 - Add Sublime Text's gpg key
-```curl -O https://download.sublimetext.com/sublimehq-pub.gpg && sudo pacman-key --add sublimehq-pub.gpg && sudo pacman-key --lsign-key 8A8F901A && rm sublimehq-pub.gpg```
+```
+curl -O https://download.sublimetext.com/sublimehq-pub.gpg && sudo pacman-key --add sublimehq-pub.gpg && sudo pacman-key --lsign-key 8A8F901A && rm sublimehq-pub.gpg
+```
 
 - Add repo to pacman
-```echo -e "\n[sublime-text]\nServer = https://download.sublimetext.com/arch/stable/x86_64" | sudo tee -a /etc/pacman.conf```
+```
+echo -e "\n[sublime-text]\nServer = https://download.sublimetext.com/arch/stable/x86_64" | sudo tee -a /etc/pacman.conf
+```
 
 - Install with pacman
-```sudo pacman -Syu sublime-text```
+```
+sudo pacman -Syu sublime-text
+```
 
 ## GTK themes
 
@@ -136,10 +165,12 @@ sudo pacman -S otf-ipafont
 ```
 sudo pacman -S qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat
 ```
+
 - Enable the libvirtd service
 ```
 sudo systemctl enable libvirtd
 ```
+
 - Vim into /etc/libvirt/libvirtd.conf and uncomment the lines
 ``` 
 sudo vim /etc/libvirt/libvirtd.conf
@@ -147,6 +178,7 @@ sudo vim /etc/libvirt/libvirtd.conf
 #unix_sock_ro_perms = "0777"
 #unix_sock_rw_perms = "0770"
 ```
+
 - Add user to libvirt group 
 ```
 eval sudo usermod -aG libvirt $(whoami)
@@ -157,43 +189,61 @@ eval sudo usermod -aG libvirt $(whoami)
 ### File Managers
 
 - Pcmanfm: Light-weight graphical file manager
-```sudo pacman -S pcmanfm```
+```
+sudo pacman -S pcmanfm
+```
 
 ### IDEs and text editors
 
 - VSCodium: Just VScode without the telemetry bullshit
-```paru vscodium-bin```
+```
+paru vscodium-bin
+```
 
 ### Utility
 
 - MSPaint like software;
-```sudo pacman -S pinta```
+```
+sudo pacman -S pinta
+```
 
 ### Communication
 
 - Discord
-```sudo pacman -S discord```
+```
+sudo pacman -S discord
+```
 
 ### Password management
 
 - Bitwarden (cloud-based)
-```sudo pacman -S bitwarden```
+```
+sudo pacman -S bitwarden
+```
 
 - KeepassXC (local-database)
-```sudo pacman -S keepassxc```
+```
+sudo pacman -S keepassxc
+```
 
 ### VPN
 
 - Mullvad
-```paru mullvad-vpn```
+```
+paru mullvad-vpn
+```
 
 ### Synchronization and Backups
 
 - Nextcloud
-```sudo pacman -S nextcloud```
+```
+sudo pacman -S nextcloud
+```
 
 **Note:** if using nextcloud, it is recommended to install gnome-keyring for session management. Otherwise, user login will be needed on every session.
-```sudo pacman -S gnome-keyring```
+```
+sudo pacman -S gnome-keyring
+```
 
 ## Common problems
 
