@@ -15,7 +15,7 @@ export SSH_AUTH_SOCK
 xrdb merge ~/.Xresources
 
 # Set Layout to US international
-setxkbmap -layout us -variant alt-intl
+setxkbmap -layout us -variant alt-intl &
 
 # Disable Screensaver
 # xset -dpms s off &
@@ -31,12 +31,7 @@ numlockx on &
 # Run compositor
 picom &
 
-if [ -e "$(echo $HOST_LOCATION)" ]; then
-	discord &
-fi
-
-mullvad-vpn &
-bitwarden-desktop &
+eval ~/.scripts/startup-apps-$(cat /etc/hostname)
 
 # run bar script and dwm ( do not remove this )
 ~/.dwm/bar/./bar.sh &
