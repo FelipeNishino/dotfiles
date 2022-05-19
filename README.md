@@ -154,9 +154,14 @@ sudo pacman -S ttf-cascadia-code
 sudo pacman -S ttf-font-awesome
 ```
 
-- Font for japanese characters compatibility
+- Font for japanese characters compatibility (enable ja_JP.UTF-8 in /etc/locale.gen)
 ```
 sudo pacman -S otf-ipafont
+```
+
+- Font for korean characters compatibility (enable ko_KR.UTF-8 in /etc/locale.gen)
+```
+sudo pacman -S ttf-baekmuk
 ```
 
 ## QEMU:
@@ -183,6 +188,28 @@ sudo vim /etc/libvirt/libvirtd.conf
 ```
 eval sudo usermod -aG libvirt $(whoami)
 ```
+
+## Steam
+
+This part of the guide assumes that you have a nvidia GPU.
+
+- Enable multilib repo on /etc/pacman.conf
+```
+sudo vim /etc/pacman.conf
+# Uncomment the following lines
+[multilib]
+Include = /etc/pacman.d/mirrorlist
+```
+
+- Install the following packages:
+```
+sudo pacman -S steam ttf-liberation wqy-zenhei nvidia-utils lib32-nvidia-utils
+```  
+
+Each of the packages are explained bellow
+- ttf-liberation: replacement font fot microsoft's arial font family.
+- wqy-zenhei: support for asian characters.
+- nvidia-utils/lib32-nvidia utils: compositor, needed for transparency and some visual effects.
 
 ## Random assortment of programs
 
