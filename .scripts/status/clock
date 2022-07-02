@@ -19,7 +19,7 @@ esac
 printf "^c$pink^^b$black^\uf017 "
 if [ -z $(cat $varpath) ] 
 then
-	printf "$(date '+%A, %b %d - %H:%M') "
+	printf "$(date '+%A, %b %d - %H:%M')"
 else
-	printf "%s\n " "$hour_minute "
+	printf "%s\n " "$hour_minute"
 fi
