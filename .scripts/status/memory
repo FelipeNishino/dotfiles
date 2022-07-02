@@ -1,0 +1,17 @@
+#!/bin/sh
+. ~/.dwm/bar/themes/uwu
+
+icon="\uf538"
+varpath=~/.scripts/vars/expand_mem
+
+case $BUTTON in
+	1) if [ -z $(cat $varpath) ]; then echo "t" > $varpath; else echo > $varpath; fi;;
+esac
+
+printf "^c$pink^^b$black^\uf538 "
+if [ -z $(cat $varpath) ]
+then
+       	free -h | awk '/^Mem/ { print $3"/"$2 }' | sed s/i//g
+else
+       	free -h | awk '/^Mem/ { print $3 }' | sed s/i//g
+fi

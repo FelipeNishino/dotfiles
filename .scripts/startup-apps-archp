@@ -1,0 +1,6 @@
+#if [ -z "$(echo $NO_DISCORD)" ]; then
+#	discord &
+#fi
+#mullvad-vpn &
+#bitwarden-desktop &
+flameshot &

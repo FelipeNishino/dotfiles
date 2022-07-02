@@ -1,0 +1,74 @@
+#!/usr/bin/env bash
+
+# wifi network status bar indicator for dwmblocks
+# uses netcat and iw to get connection information
+
+icon=""
+
+notify() {
+    dunstify --appname="wifi" --replace=1 "$1" "$2" --timeout="$3"
+}
+
+data_path=~/.local/share/wifi_state
+current_state=$(<$data_path)
+
+info=$(iw dev wlan0 link | grep SSID | xargs)
+ssid=${info#"SSID: "}
+signal=$(awk 'NR==3 {printf("%.0f%%",$3*10/7)}' /proc/net/wireless)
+
+airplane_mode=$(rfkill list | grep yes)
+
+title="Checking connection"
+sub="Please wait..."
+timeout=0
+
+if [ ! -z "$airplane_mode" ]; then # check for airplane mode
+    icon=""
+    title="Airplane mode"
+    sub="No signal"
+    timeout=7000
+    if [ "$current_state" != "airplane" ]; then
+        notify "$title" "$sub" "$timeout"
+        printf "airplane" > $data_path
+    fi
+elif [ -z "$ssid" ]; then # checking if we are connected to a wifi network
+    icon=""
+    title="Connection lost"
+    sub="No WiFi network"
+    timeout=7000
+    if [ "$current_state" != "no-network" ]; then
+        notify "$title" "$sub" "$timeout"
+        printf "no-network" > $data_path
+    fi
+else
+    # checking internet connection
+    if [ "$BLOCK_BUTTON" = 1 ]; then
+        notify "Checking connection" "Please wait..." 0;
+    fi
+    if ping -c 2 -W 1 8.8.8.8 > /dev/null 2>&1; then
+        icon=""
+        title="$ssid"
+        sub="Online, signal: $signal"
+        timeout=7000
+        if [ "$current_state" != "online, $ssid" ]; then
+            notify "$title" "$sub" "$timeout"
+            printf "%s\n" "online, $ssid" > $data_path
+        fi
+    else
+        icon=""
+        title="$ssid"
+        sub="Offline, signal: $signal"
+        timeout=7000
+        if [ "$current_state" != "offline, $ssid" ]; then
+            notify "$title" "$sub" "$timeout"
+            printf "%s\n" "offline, $ssid" > $data_path
+        fi
+    fi
+fi
+
+case $BLOCK_BUTTON in
+    1) notify "$title" "$sub" "$timeout" ;;
+    3) setsid -f "$($TERMINAL -e iwctl)" ;;
+esac
+
+printf "  %s\n" "$icon"

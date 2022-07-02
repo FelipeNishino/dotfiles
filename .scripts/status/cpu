@@ -1,0 +1,15 @@
+#!/bin/bash
+. ~/.dwm/bar/themes/uwu
+
+# . ~/.dwm/bar/themes/uwu
+
+# cpu_val=$()
+
+printf "^c$darkblue^^b$black^\uf2db $(grep -o "^[^ ]*" /proc/loadavg)"
+
+# cpu() {
+#   cpu_val=$(grep -o "^[^ ]*" /proc/loadavg)
+	
+#   printf "^c$darkblue^^b$black^ \uf2db "
+#   printf "^c$darkblue^^b$black^$cpu_val"
+# }

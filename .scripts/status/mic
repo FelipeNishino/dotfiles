@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# This script checks the state of the default microphone of my laptop
+# and displays an appropriate indicator icon if it's muted/active.
+
+case $BLOCK_BUTTON in
+    1) pactl set-source-mute 0 toggle ;;
+    3) setsid -f "$($TERMINAL pulsemixer)" ;;
+    4) scrollsig=1 ;; # don't show notifications on scroll event
+    5) scrollsig=1 ;;
+esac
+
+notify() {
+    dunstify --appname="microphone" --replace=1 "$1" "$2"
+}
+
+micinfo="$(pactl list sources | grep 'Name\|Mute\|Volume:')"
+
+echo "$micinfo" | grep "Mute: yes" > /dev/null && mic_status="muted" || mic_status="active" 
+
+if [ "$mic_status" = "muted" ]; then
+    printf "%s\n" ""
+    [ "$scrollsig" != "1" ] && notify "Microphone muted"
+else
+    printf "%s\n" ""
+    [ "$scrollsig" != "1" ] && notify "Microphone active"
+fi

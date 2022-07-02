@@ -1,0 +1,524 @@
+{
+	"folder_history":
+	[
+		"/home/nishi/Projects/parallel-computing",
+		"/home/nishi/.scripts/status",
+		"/home/nishi/Projects/dwmblocks/themes",
+		"/home/nishi/.dwm/bar",
+		"/home/nishi/Projects/dwm",
+		"/home/nishi/Projects/Compiler",
+		"/home/nishi/Projects/backtracking",
+		"/home/nishi/Projects/teste-tcc-chatbot",
+		"/home/nishi/Projects/TCC-chatbot",
+		"/home/nishi/Projects/pthreads",
+		"/home/nishi/Projects/huffman-encoding",
+		"/home/nishi/Projects/huffman-encoding/src"
+	],
+	"last_version": 4126,
+	"last_window_id": 18,
+	"log_indexing": false,
+	"next_update_check": 1654111160,
+	"settings":
+	{
+		"new_window_full_screen": false,
+		"new_window_height": 877.0,
+		"new_window_maximized": false,
+		"new_window_settings":
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"rese",
+						"reserved_word_info"
+					],
+					[
+						"generate_",
+						"generate_boundaries"
+					],
+					[
+						"print",
+						"printArray"
+					],
+					[
+						"parser_ass",
+						"parser_assignment_expression"
+					],
+					[
+						"ar",
+						"argv"
+					],
+					[
+						"RESE",
+						"RESERVED_WORD_STRING"
+					],
+					[
+						"lexer_read_",
+						"lexer_read_string_literal"
+					],
+					[
+						"char",
+						"char_frequency_row"
+					],
+					[
+						"cfr",
+						"cfr_generate_frequency_chart"
+					]
+				]
+			},
+			"build_system_choices":
+			[
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+					[
+						"the",
+						"UI: Select Theme"
+					],
+					[
+						"install",
+						"Package Control: Install Package"
+					]
+				],
+				"width": 0.0
+			},
+			"console":
+			{
+				"height": 0.0,
+				"history":
+				[
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/home/nishi/.scripts/status/bar.sh",
+				"/home/nishi/Projects/Compiler/src/include/lexer.h",
+				"/home/nishi/Projects/Compiler/input2.txt",
+				"/home/nishi/Projects/Compiler/src/main.c",
+				"/home/nishi/Projects/backtracking/5.py",
+				"/home/nishi/Projects/backtracking/3.c",
+				"/home/nishi/Projects/backtracking/2.c",
+				"/home/nishi/Projects/backtracking/1.c",
+				"/home/nishi/Projects/Compiler/src/parser.c",
+				"/home/nishi/Projects/Compiler/src/nl.c",
+				"/home/nishi/Projects/Compiler/src/include/variable.h",
+				"/home/nishi/Projects/Compiler/src/variable.c",
+				"/home/nishi/Projects/Compiler/src/include/token.h",
+				"/home/nishi/Projects/Compiler/src/include/main.h",
+				"/home/nishi/Projects/Compiler/src/hashmap.c",
+				"/home/nishi/Projects/Compiler/src/include/hashmap.h",
+				"/home/nishi/Projects/huffman-encoding/src/hashmap.c",
+				"/home/nishi/Projects/huffman-encoding/src/include/hashmap.h",
+				"/home/nishi/Projects/Compiler/grammar.ebnf"
+			],
+			"find":
+			{
+				"height": 31.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"scrollbar_highlights": true,
+				"show_context": true,
+				"use_buffer2": true,
+				"use_gitignore": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"incremental_find":
+			{
+				"height": 31.0
+			},
+			"input":
+			{
+				"height": 43.0
+			},
+			"menu_visible": true,
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "",
+			"replace":
+			{
+				"height": 58.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 150.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			}
+		},
+		"new_window_width": 1598.0
+	},
+	"windows":
+	[
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"rese",
+						"reserved_word_info"
+					],
+					[
+						"generate_",
+						"generate_boundaries"
+					],
+					[
+						"print",
+						"printArray"
+					],
+					[
+						"parser_ass",
+						"parser_assignment_expression"
+					],
+					[
+						"ar",
+						"argv"
+					],
+					[
+						"RESE",
+						"RESERVED_WORD_STRING"
+					],
+					[
+						"lexer_read_",
+						"lexer_read_string_literal"
+					],
+					[
+						"char",
+						"char_frequency_row"
+					],
+					[
+						"cfr",
+						"cfr_generate_frequency_chart"
+					]
+				]
+			},
+			"buffers":
+			[
+				{
+					"file": "/home/nishi/Projects/parallel-computing/mpi/broadcast.c",
+					"settings":
+					{
+						"buffer_size": 3517,
+						"encoding": "UTF-8",
+						"line_ending": "Unix"
+					},
+					"undo_stack":
+					[
+						[
+							5,
+							2,
+							"left_delete",
+							null,
+							"AgAAAJMBAAAAAAAAkwEAAAAAAAABAAAACpIBAAAAAAAAkgEAAAAAAAABAAAACg",
+							"AQAAAAAAAAABAAAAlAEAAAAAAACTAQAAAAAAAAAAAAAAAPC/"
+						]
+					]
+				}
+			],
+			"build_system": "",
+			"build_system_choices":
+			[
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+					[
+						"the",
+						"UI: Select Theme"
+					],
+					[
+						"install",
+						"Package Control: Install Package"
+					]
+				],
+				"width": 0.0
+			},
+			"console":
+			{
+				"height": 0.0,
+				"history":
+				[
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"expanded_folders":
+			[
+				"/home/nishi/Projects/parallel-computing",
+				"/home/nishi/Projects/parallel-computing/mpi",
+				"/home/nishi/Projects/parallel-computing/openmp"
+			],
+			"file_history":
+			[
+				"/home/nishi/.scripts/status/bar.sh",
+				"/home/nishi/Projects/Compiler/src/include/lexer.h",
+				"/home/nishi/Projects/Compiler/input2.txt",
+				"/home/nishi/Projects/Compiler/src/main.c",
+				"/home/nishi/Projects/backtracking/5.py",
+				"/home/nishi/Projects/backtracking/3.c",
+				"/home/nishi/Projects/backtracking/2.c",
+				"/home/nishi/Projects/backtracking/1.c",
+				"/home/nishi/Projects/Compiler/src/parser.c",
+				"/home/nishi/Projects/Compiler/src/nl.c",
+				"/home/nishi/Projects/Compiler/src/include/variable.h",
+				"/home/nishi/Projects/Compiler/src/variable.c",
+				"/home/nishi/Projects/Compiler/src/include/token.h",
+				"/home/nishi/Projects/Compiler/src/include/main.h",
+				"/home/nishi/Projects/Compiler/src/hashmap.c",
+				"/home/nishi/Projects/Compiler/src/include/hashmap.h",
+				"/home/nishi/Projects/huffman-encoding/src/hashmap.c",
+				"/home/nishi/Projects/huffman-encoding/src/include/hashmap.h",
+				"/home/nishi/Projects/Compiler/grammar.ebnf"
+			],
+			"find":
+			{
+				"height": 31.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"scrollbar_highlights": true,
+				"show_context": true,
+				"use_buffer2": true,
+				"use_gitignore": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"folders":
+			[
+				{
+					"path": "/home/nishi/Projects/parallel-computing"
+				}
+			],
+			"groups":
+			[
+				{
+					"sheets":
+					[
+						{
+							"buffer": 0,
+							"file": "/home/nishi/Projects/parallel-computing/mpi/broadcast.c",
+							"selected": true,
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 3517,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										0,
+										3517
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/C++/C.sublime-syntax",
+									"tab_size": 4,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 1056.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 0,
+							"stack_multiselect": false,
+							"type": "text"
+						}
+					]
+				}
+			],
+			"incremental_find":
+			{
+				"height": 31.0
+			},
+			"input":
+			{
+				"height": 43.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "",
+			"position": "0,0,0,0,0,0,21,1598,898,1600,900,0",
+			"project": "",
+			"replace":
+			{
+				"height": 58.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"selected_group": 0,
+			"settings":
+			{
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 150.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			},
+			"window_id": 18,
+			"workspace_name": ""
+		}
+	],
+	"workspaces":
+	{
+		"recent_workspaces":
+		[
+		]
+	}
+}

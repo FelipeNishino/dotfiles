@@ -1,0 +1,25 @@
+#!/bin/bash
+. ~/.dwm/bar/themes/uwu
+
+notify() {
+	dunstify --appname="clock" --replace=1 "$1" "$2"
+}
+
+icon="\uf017"
+date="$(date '+%a %d %b %Y')"
+hour_minute="$(date '+%H:%M')"
+varpath=~/.scripts/vars/expand_clock
+
+case $BUTTON in
+	1) if [ -z $(cat $varpath) ]; then echo "t" > $varpath; else echo > $varpath; fi ;;
+	3) notify "$date" "";;
+esac
+
+#printf "^c$black^^b$purple^\uf017 "
+printf "^c$pink^^b$black^\uf017 "
+if [ -z $(cat $varpath) ] 
+then
+	printf "$(date '+%A, %b %d - %H:%M') "
+else
+	printf "%s\n " "$hour_minute "
+fi

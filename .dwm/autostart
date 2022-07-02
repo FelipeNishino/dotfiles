@@ -1,0 +1,40 @@
+#!/bin/sh
+
+# add your autostart stuffs here
+
+eval ~/.scripts/resolution-$(cat /etc/hostname)
+
+# Add Background
+# xwallpaper --center ~/.wallpapers/15.png &
+feh --bg-scale ~/.wallpapers/15.png &
+
+eval $(gnome-keyring-daemon --start)
+export SSH_AUTH_SOCK
+
+# Xresources
+xrdb merge ~/.Xresources
+
+# Set Layout to US international
+setxkbmap -layout us -variant alt-intl &
+
+# Disable Screensaver
+# xset -dpms s off &
+
+# Notify
+dunst -config ~/Downloads/git/dwm-dots/.config/dunst/dunstrc-dark-right &
+
+# Clipboard
+xclip &
+
+# Activate numlock
+numlockx on &
+# Run compositor
+picom &
+
+eval ~/.scripts/startup-apps-$(cat /etc/hostname)
+
+# run bar script and dwm ( do not remove this )
+# ~/.dwm/bar/./bar.sh &
+dwmblocks &
+exec dbus-launch dwm
+ 

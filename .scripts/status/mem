@@ -1,0 +1,4 @@
+#!/bin/bash
+. ~/.dwm/bar/themes/uwu
+
+printf "^c$pink^$(free -h | awk '/^Mem/ { print $3 }' | sed s/i//g)"

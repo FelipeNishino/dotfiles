@@ -1,0 +1,9 @@
+{
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+	"theme": "Default Dark.sublime-theme",
+	"font_face": "Cascadia Code",
+	"font_size": 13,
+}

@@ -1,0 +1,24 @@
+#!/bin/bash
+. ~/.dwm/bar/themes/uwu
+
+notify() {
+	dunstify --appname="sb-network" --replace=1 "$1" "$2"
+}
+
+[ -n "$(nmcli -a | grep 'Wired connection')" ] && CONNAME="wired:"
+[ -n "$(nmcli -t -f active,ssid dev wifi | grep '^yes')" ] && CONNAME="wifi:"
+PRIVATE=$(nmcli -a | grep 'inet4' | awk '{print $2}')
+
+case $BUTTON in 
+	1) notify "Current network:" "$(PRIVATE)" ;;
+esac
+
+if [ "$CONNAME" = "" ]; then # we don't have a connection
+	printf "^c$blue^^b$black^\uf6ac^d^"
+else # we have a connection
+	if [ "$CONNAME" = "wired:" ]; then
+		printf "^c$blue^^b$black^\uf796"
+	else
+    		printf "^c$blue^^b$black^\uf1eb"
+	fi
+fi

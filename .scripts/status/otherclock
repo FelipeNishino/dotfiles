@@ -1,0 +1,30 @@
+#!/bin/sh
+
+notify() {
+    dunstify --appname="clock" --replace=1 "$1" "$2"
+}
+
+icon=""
+date="$(date '+%a %d %b %Y')"
+hour_minute="$(date '+%H:%M')"
+teste=""
+
+case $BUTTON in
+	1) notify "$date" "Right click to open calcurse";;
+	#3) setsid -f st -f 'mono:pixelsize=20:antialias=true:autohint=true' -e calcurse ;;
+	3) if [ -z $teste ]
+		then
+		       	notify "test" "test vazio"
+			teste="asdasd"
+		else 
+			notify "test" "test preencchido"
+			teste=""
+	fi ;;
+esac
+
+if [ -z $teste ]
+then
+	printf "%s %s\n " "$icon" "$hour_minute "
+else
+	printf "%s asdada %s\n " "$icon" "$hour_minute "
+fi
