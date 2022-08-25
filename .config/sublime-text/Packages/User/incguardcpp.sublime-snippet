@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+#ifndef ${1:_H}
+#define ${1:_H}
+#endif //${1:_H}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<tabTrigger>incguard</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.c</scope> -->
+	<scope>source.c++</scope>
+</snippet>
