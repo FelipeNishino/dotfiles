@@ -115,4 +115,7 @@ export VISUAL=/user/bin/vim
 
 alias rel="xrdb merge ~/.Xresources && kill -USR1 $(pidof st)"
 alias reldwmblocks="pkill -RTMIN+10 dwmblocks"
+alias update-keyring="sudo pacman -S archlinux-keyring"
+alias valg="valgrind --leak-check=full --show-leak-kinds=all -v --track-origins=yes"
+alias syu="sudo pacman -Syu"
 alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
