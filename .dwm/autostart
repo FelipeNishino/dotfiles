@@ -6,7 +6,7 @@ eval ~/.scripts/resolution-$(cat /etc/hostname)
 
 # Add Background
 # xwallpaper --center ~/.wallpapers/15.png &
-feh --bg-scale ~/.wallpapers/15.png &
+~/.fehbg &
 
 eval $(gnome-keyring-daemon --start)
 export SSH_AUTH_SOCK
@@ -21,7 +21,8 @@ setxkbmap -layout us -variant alt-intl &
 # xset -dpms s off &
 
 # Notify
-dunst -config ~/Downloads/git/dwm-dots/.config/dunst/dunstrc-dark-right &
+#dunst -config ~/Downloads/git/dwm-dots/.config/dunst/dunstrc-dark-right &
+dunst -config ~/.config/dunst/dunstrc &
 
 # Clipboard
 xclip &
