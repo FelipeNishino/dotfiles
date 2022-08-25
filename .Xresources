@@ -15,10 +15,9 @@ dwm.normbgcolor: #222222
 dwm.normbordercolor: #444444
 dwm.normfgcolor: #BBBBBB
 dwm.selbgcolor: #9545E0
-!dwm.selbgcolor: #954530
 dwm.selbordercolor: #005577
 dwm.selfgcolor: #C5C8C9
-dwm.borderpx: 1
+dwm.borderpx: 0
 dwm.snap: 0
 !dwm.showbar: 0
 !dwm.topbar: 0
@@ -28,38 +27,77 @@ dwm.snap: 0
 
 ! GENERAL -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-*background: #1E1E28
-*foreground: #DADAE8
+! CATPPUCCIN
+
+*background: #1E1E2E
+*foreground: #D9E0EE
+
+! Gray
+*color0: #6E6C7E
+*color8: #988BA2
+
+! Red
+*color1: #F28FAD
+*color9: #F28FAD
+
+! Green
+*color2: #ABE9B3
+*color10: #ABE9B3
+
+! Yellow
+*color3: #FAE3B0
+*color11:  #FAE3B0
+
+! Blue
+*color4: #96CDFB
+*color12: #96CDFB
+
+! Maguve
+*color5: #DDB6F2
+*color13: #DDB6F2
+
+! Pink
+*color6: #F5C2E7
+*color14: #F5C2E7
+
+! Whites
+*color7: #C3BAC6
+*color15: #D9E0EE
+
+! LINUXMOBIKE
+
+!*background: #1E1E28
+!*foreground: #DADAE8
 
 ! Black + dark black
-*color0: #6E6C7E
-*color8: #6E6C7E
+!*color0: #6E6C7E
+!*color8: #6E6C7E
 
 ! red
-*color1: #E38C8F
-*color9: #E38C8F
+!*color1: #E38C8F
+!*color9: #E38C8F
 
 ! green
-*color2: #B1E3AD
-*color10: #B1E3AD
+!*color2: #B1E3AD
+!*color10: #B1E3AD
 
 ! yellow
-*color3: #EBDDAA
-*color11: #EBDDAA
+!*color3: #EBDDAA
+!*color11: #EBDDAA
 
 ! blue
-*color4: #A4B9EF
-*color12: #A4B9EF
+!*color4: #A4B9EF
+!*color12: #A4B9EF
 
 ! magenta
-*color5: #C6AAE8
-*color13: #C6AAE8
+!*color5: #C6AAE8
+!*color13: #C6AAE8
 
 ! pink
-*color6: #E5B4E2
-*color14: #E5B4E2
+!*color6: #E5B4E2
+!*color14: #E5B4E2
 
 ! white
-*color7: #DADAE8
-*color15: #DADAE8
+!*color7: #DADAE8
+!*color15: #DADAE8
 
