@@ -13,6 +13,7 @@ Each of the packages are explained bellow
 - numlockx: cli tool for toggling numlock.
 - xclip: cli access to the X11 clipboard.
 - dmenu: application launcher used by dwm.
+- rofi (optional): eye-candy, can be used instead of dmenu.
 - imlib2, libxft, libxinerama: some dependencies for dwm, you don´t necessarily need these if not using dwm.
 
 It is recommended to install drivers for your gpu, take a look into the arch wiki to find out which one you'll need.
@@ -37,6 +38,13 @@ My dwm fork uses st as the terminal emulator, so that is also needed. For st's i
 git clone https://github.com/felipenishino/st.git
 cd st
 sudo make clean install
+```
+
+### Yakuake (Dropdown terminal)
+
+Yakuake is used as a persistent terminal called with F12. Install the following packages and get the dotfiles from my dotfiles repo.
+```
+sudo pacman -S yakuake konsole
 ```
 
 ## Audio server
@@ -137,7 +145,7 @@ sudo pacman -Syu sublime-text
 
 ## GTK themes
 
-- Install some GTK theme
+- Install some GTK themes
 ```
 paru catppuccin-gtk-theme
 ```
@@ -245,38 +253,61 @@ vim ~/.config/retroarch/retroarch.cfg
 menu_show_core_updater = "true"
 ```
 
-## Random assortment of programs
+# Random assortment of programs
 
-### Browsers
+## Browsers
 
 - Firefox: Overall great privacy-focused browser without sacrificing too much usability
 	- Recommended Extensions: ublock origin, bitwarden, multi-account containers, skip redirect, temporary containers
 ```
 sudo pacman -S firefox
 ```
-
 - Brave: Chromium-based privacy-focused browser
 ```
 paru brave-bin
 ```
 
-### File Managers
+---
 
-- Pcmanfm: Light-weight graphical file manager
-```
-sudo pacman -S pcmanfm
-```
+## Cloud and Synchronization
 
-### Mail client
-
-- thunderbird: Mozilla mail client
+- Nextcloud
 ```
-sudo pacman -S thunderbird
+sudo pacman -S nextcloud
 ```
 
-### IDEs and text editors
+**Note:** if using nextcloud, it is recommended to install gnome-keyring for session management. Otherwise, user login will be needed on every session. (Check arch wiki for install instructions) (VERIFY)
+```
+sudo pacman -S gnome-keyring
+```
+
+---
+
+## Common Tools
+
+- Handlr: Used for setting application defaults
+
+```
+sudo pacman -S handlr
+```
+
+---
+
+## Communication
+
+- Discord
+```
+sudo pacman -S discord
+```
+
+---
+
+## Development
+
+### IDEs
 
 - VSCodium: Just VScode without the telemetry bullshit
+	- Extensions: Catppuccin, Material Theme Icons, clangd, prettier
 ```
 paru vscodium-bin
 ```
@@ -286,23 +317,68 @@ paru vscodium-bin
 paru android-studio
 ```
 
-### Development tools
+### Tools
 
 - Valgrind: Memory debugger for C programs
 ```
 sudo pacman -S valgrind
 ```
 
-### Utility
+---
 
-- MSPaint like software
+## File Managers
+
+- Pcmanfm: Light-weight graphical file manager
 ```
-sudo pacman -S pinta
+sudo pacman -S pcmanfm
 ```
+
+Set as default application for opening folders:
+```
+handlr set inode/directory pcmanfm.desktop
+```
+
+---
+
+## Mail client
+
+- thunderbird: Mozilla mail client
+```
+sudo pacman -S thunderbird
+```
+
+---
+
+## Media
+
+- OBS: Recording and Live-streaming suite
+``` 
+sudo pacman -S obs-studio v4l2loopback-dkms
+sudo usermod -aG video $(whoami)
+```
+
+---
+
+## Music
+
+- Spotify: Proprietary music streaming client
+	- [Spicetify](https://github.com/spicetify): client customizations
+``` 
+paru spotify
+```
+
+---
+
+## Utility
 
 - Krita: Powerfull FOSS alternative to photoshop
 ```
 sudo pacman -S krita
+```
+
+- Pinta: MSPaint like software
+```
+sudo pacman -S pinta
 ```
 
 - scrcpy: Software for mirroring and controlling android devices through adb
@@ -315,22 +391,10 @@ sudo pacman -S scrcpy
 sudo pacman -S termdown
 ```
 
-### Communication
 
-- Discord
-```
-sudo pacman -S discord
-```
+---
 
-### Media
-
-- OBS: Recording and Live-streaming suite
-``` 
-sudo pacman -S obs-studio v4l2loopback-dkms
-sudo usermod -aG video $(whoami)
-```
-
-### Password management
+## Password management
 
 - Bitwarden (cloud-based)
 ```
@@ -342,24 +406,16 @@ sudo pacman -S bitwarden
 sudo pacman -S keepassxc
 ```
 
-### VPN
+---
+
+## VPN
 
 - Mullvad
 ```
 paru mullvad-vpn-bin
 ```
 
-### Synchronization and Backups
-
-- Nextcloud
-```
-sudo pacman -S nextcloud
-```
-
-**Note:** if using nextcloud, it is recommended to install gnome-keyring for session management. Otherwise, user login will be needed on every session. (Check arch wiki for install instructions)
-```
-sudo pacman -S gnome-keyring
-```
+---
 
 ## Common problems
 
