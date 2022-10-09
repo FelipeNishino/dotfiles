@@ -422,4 +422,9 @@ paru mullvad-vpn-bin
 - **Using pacman fails with errors on gpg keys**: 
 Update archlinux-keyring before attempting any other transactions.
 
+- **GUI python applications need explicit installation of tkinter**
+The package name for tkinter on pacman is tk:
+```
+sudo pacman -S tk
+```
 
