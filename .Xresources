@@ -5,16 +5,17 @@ st.alpha: 0.95
 
 ! inner padding
 st.borderpx: 15
-st.font: Cascadia Code :pixelsize=15:antialias=true:autohint=true
+! st.borderpx: 0
+st.font: CaskaydiaCove Nerd Font :pixelsize=15:antialias=true:autohint=true
 
 ! DWM -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-dwm.font: Cascadia Code :size=12
-dwm.dmenufont: Cascadia Code :size=12
+!dwm.font: CaskaydiaCove Nerd Font :size=12
+!dwm.dmenufont: CaskaydiaCove Nerd Font :size=12
 dwm.normbgcolor: #222222
 dwm.normbordercolor: #444444
 dwm.normfgcolor: #BBBBBB
-dwm.selbgcolor: #9545E0
+dwm.selbgcolor: #DDB6F2
 dwm.selbordercolor: #005577
 dwm.selfgcolor: #C5C8C9
 dwm.borderpx: 0
@@ -27,42 +28,79 @@ dwm.snap: 0
 
 ! GENERAL -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-! CATPPUCCIN
+! CATPPUCCIN MOCHA
 
 *background: #1E1E2E
-*foreground: #D9E0EE
+*foreground: #CDD6F4
+
+! black
+*color0: #45475A
+*color8: #585B70
+
+! red
+*color1: #F38BA8
+*color9: #F38BA8
+
+! green
+*color2: #A6E3A1
+*color10: #A6E3A1
+
+! yellow
+*color3: #F9E2AF
+*color11: #F9E2AF
+
+! blue
+*color4: #89B4FA
+*color12: #89B4FA
+
+! magenta
+*color5: #F5C2E7
+*color13: #F5C2E7
+
+! cyan
+*color6: #94E2D5
+*color14: #94E2D5
+
+! white
+*color7: #BAC2DE
+*color15: #A6ADC8
+
+! CATPPUCCIN (OLD)
+
+! *background: #1E1E2E
+! *foreground: #D9E0EE
 
 ! Gray
-*color0: #6E6C7E
-*color8: #988BA2
+! *color0: #6E6C7E
+! *color8: #988BA2
 
 ! Red
-*color1: #F28FAD
-*color9: #F28FAD
+! *color1: #F28FAD
+! *color9: #F28FAD
 
 ! Green
-*color2: #ABE9B3
-*color10: #ABE9B3
+! *color2: #ABE9B3
+! *color10: #ABE9B3
 
 ! Yellow
-*color3: #FAE3B0
-*color11:  #FAE3B0
+! *color3: #FAE3B0
+! *color11:  #FAE3B0
 
 ! Blue
-*color4: #96CDFB
-*color12: #96CDFB
+! *color4: #96CDFB
+! *color12: #96CDFB
 
 ! Maguve
-*color5: #DDB6F2
-*color13: #DDB6F2
+! *color5: #DDB6F2
+! *color13: #DDB6F2
 
 ! Pink
-*color6: #F5C2E7
-*color14: #F5C2E7
+! *color6: #F5C2E7
+! *color14: #F5C2E7
 
 ! Whites
-*color7: #C3BAC6
-*color15: #D9E0EE
+! *color7: #C3BAC6
+! *color15: #D9E0EE
 
 ! LINUXMOBIKE
 
