@@ -1,0 +1,18 @@
+exec --no-startup-id eval ~/.scripts/resolution-$(cat /etc/hostname)
+
+exec --no-startup-id ~/.fehbg 
+
+#exec --no-startup-id eval $(gnome-keyring-daemon --start)
+#exec --no-startup-id export SSH_AUTH_SOCK
+
+exec --no-startup-id xrgb merge ~/.Xresources
+
+exec --no-startup-id setxkbmap -layout us -variant alt-intl
+
+exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
+
+exec --no-startup-id xclip
+exec --no-startup-id numlockx on
+exec --no-startup-id picom
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec --no-startup-id eval ~/.scripts/startup-apps-$(cat /etc/hostname)
