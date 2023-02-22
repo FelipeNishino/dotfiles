@@ -234,11 +234,21 @@ paru vscodium-bin
 sudo pacman -S pinta
 ```
 
+- Krita: Powerfull FOSS alternative to photoshop
+
 ### Communication
 
 - Discord
 ```
 sudo pacman -S discord
+```
+
+### Media
+
+- OBS: Recording and Live-streaming suite
+``` 
+sudo pacman -S obs-studio v4l2loopback-dkms
+sudo usermod -aG video $(whoami)
 ```
 
 ### Password management
@@ -267,14 +277,15 @@ paru mullvad-vpn
 sudo pacman -S nextcloud
 ```
 
-**Note:** if using nextcloud, it is recommended to install gnome-keyring for session management. Otherwise, user login will be needed on every session.
+**Note:** if using nextcloud, it is recommended to install gnome-keyring for session management. Otherwise, user login will be needed on every session. (Check arch wiki for install instructions)
 ```
 sudo pacman -S gnome-keyring
 ```
 
+
 ## Common problems
 
-- **Using pacman fails with errors on gpg keys**
+- **Using pacman fails with errors on gpg keys**: 
 Update archlinux-keyring before attempting any other transactions.
 
 
