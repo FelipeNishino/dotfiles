@@ -13,10 +13,13 @@ lvim.log.level = "warn"
 lvim.format_on_save = true
 lvim.colorscheme = "catppuccin"
 lvim.format_on_save = false
+lvim.transparent_window = true
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.wrap = true
 vim.opt.expandtab = true
+vim.opt.number = true
+vim.opt.relativenumber = true
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -201,4 +204,12 @@ vim.api.nvim_create_autocmd("FileType", {
         -- let treesitter use bash highlight for zsh files as well
         require("nvim-treesitter.highlight").attach(0, "bash")
     end,
+})
+vim.api.nvim_create_autocmd("BufEnter", {
+    pattern = "$HOME/.config/i3/*",
+    command = "set filetype=i3config",
+})
+vim.api.nvim_create_autocmd("BufEnter", {
+    pattern = "/etc/samba/*",
+    command = "set filetype=samba",
 })
