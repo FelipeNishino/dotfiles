@@ -13,7 +13,6 @@ export HOST_LOCATION=$(nmcli | grep "Intel I217-LM")
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="garuda"
-
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -98,9 +97,10 @@ source $ZSH/oh-my-zsh.sh
 # fi
 
 
-export EDITOR=/user/bin/vim
-export VISUAL=/user/bin/vim
+export EDITOR=${HOME}/.local/bin/lvim
+export VISUAL=${HOME}/.local/bin/lvim
 
+unsetopt autocd
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -119,3 +119,6 @@ alias update-keyring="sudo pacman -S archlinux-keyring"
 alias valg="valgrind --leak-check=full --show-leak-kinds=all -v --track-origins=yes"
 alias syu="sudo pacman -Syu"
 alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+alias code="codium"
+alias vban_android="vban_emitter -i 192.168.0.24 -p 6980 -s Stream1 -l3 -b alsa"
+alias mingw-gcc="x86_64-w64-mingw32-gcc"
