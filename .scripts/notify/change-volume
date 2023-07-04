@@ -6,60 +6,62 @@ source $HOME/.aether-corevar
 # Audio volume changer using alsa mixer
 
 function cvol {
-    amixer -D pulse get Master | grep '%' | head -n 1 | awk -F'[' '{print $2}' | awk -F'%' '{print $1}'
+    #amixer -D pulse get Master | grep '%' | head -n 1 | awk -F'[' '{print $2}' | awk -F'%' '{print $1}'
+    echo "$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -e '[0-9.]\+' -o)"
 }
 
 function chkmute {
-    amixer -D pulse get Master | grep '%' | grep -oE '[^ ]+$' | grep off
+    #amixer -D pulse get Master | grep '%' | grep -oE '[^ ]+$' | grep off
+    wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep MUTED
+}
+
+function awk_lt() {
+    echo $(awk -vn1="$1" -vn2="$2" 'BEGIN{print (n1<n2)?1:0 }')
 }
 
 function notify {
     volume=`cvol`
     
-    if [ "$volume" = "0" ]; then
-        icon_name="$ICONDIR/volume-muted"
-    else    
-        if [  "$volume" -lt "10" ]; then
-            icon_name="$ICONDIR/volume-low"
-        else
-            if [ "$volume" -lt "30" ]; then
-                icon_name="$ICONDIR/volume-low"
-            else
-                if [ "$volume" -lt "70" ]; then
-                    icon_name="$ICONDIR/volume-medium"
-                else
-                    icon_name="$ICONDIR/volume-high"
-                fi
-            fi
-        fi
+    if [ -e $(chkmute) ]; then
+      if [ "$volume" == "0.00" ]; then
+          icon_name="volume-off-solid"
+      elif [ $(awk_lt $volume 0.3) = 1 ]; then
+        icon_name="volume-low-solid"
+      elif [ $(awk_lt $volume 0.7) = 1 ]; then
+        icon_name="volume-xmark-solid"
+      else
+        icon_name="volume-high-solid"
+      fi
+    else
+        icon_name="volume-xmark-solid"
     fi
 
-    $NOTIFIER -i "$icon_name.png" -t 2000 -r 123 "$volume "
+    $NOTIFIER -i "$HOME/.icons/svg/volume/$icon_name.svg" -t 2000 -r 123 "Volume: $volume "
 }
 
 case $1 in
     up)
-	# Unmute
-	amixer -D pulse set Master on > /dev/null
-	# +5%
-	amixer -D pulse sset Master 5%+ > /dev/null
-	notify
-	;;
+      volume=$(cvol)
+      if [ $(awk_lt $volume 1.0) = 1 ]; then
+          wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+	        notify
+      fi
+	  ;;
     down)
-    # Unmute
-	amixer -D pulse set Master on > /dev/null
-    # -5%
-	amixer -D pulse sset Master 5%- > /dev/null
-	notify
-	;;
+      wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+	    notify
+	  ;;
     mute)
     # Toggle mute
-	amixer -D pulse set Master 1+ toggle > /dev/null
-	if chkmute ; then
-    icon_name="$ICONDIR/volume-muted"
-    $NOTIFIER -i "$icon_name.png" -t 2000 -r 123 "Muted "
-	else
-	    notify
-	fi
-	;;
+      if [ -e $(chkmute) ]; then
+        body=muted
+        icon_name="$HOME/.icons/svg/volume/volume-xmark-solid"
+      else 
+        body=unmuted      
+        icon_name="$HOME/.icons/svg/volume/volume-high-solid"
+      fi
+
+      wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+      $NOTIFIER -i "$icon_name.svg" -t 2000 -r 123 "Volume $body "
+	  ;;
 esac    

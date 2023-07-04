@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+# Load Global Variable
+source $HOME/.aether-corevar
+
+
+case $1 in
+    create)
+      pw-cli cn adapter "{ 
+      factory.name=support.null-audio-sink 
+      node.name=$(echo $2)
+      media.class=Audio/Sink 
+      object.linger=true 
+      audio.position=[FL FR] 
+    }"
+	  ;;
+    exists)
+      pw-cli ls Node | grep -P 'id ([0-9]+),[\w\s:]+\/[0-9]+\n\s+(?:(?:object|factory|client|device|priority|application|media)\.[a-z]+ = "[\w:,]+"\n\ +)+(?:node\.(?:(name = "([\w\d\s\-\_\.\,]+)"\n\s+)|(?:description|nick) = "[\w\d\s\-\_\.\,]+"\n\s+))+'
+    ;;
+    destroy)
+      pw-cli d $2
+	  ;;
+esac    
