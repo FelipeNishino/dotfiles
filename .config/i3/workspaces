@@ -1,0 +1,48 @@
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set $ws1 "term"
+set $ws2 "browser"
+set $ws3 "code"
+set $ws4 "gamelibrary"
+set $ws5 "game"
+set $ws6 "aux_term"
+set $ws7 "aux_browser"
+set $ws8 "music"
+set $ws9 "9"
+set $ws10 "10"
+
+workspace $ws1 output DP-0
+workspace $ws2 output DP-0
+workspace $ws3 output DP-0
+workspace $ws4 output DP-0
+workspace $ws5 output DP-0
+workspace $ws6 output HDMI-0
+workspace $ws7 output HDMI-0
+workspace $ws8 output HDMI-0
+workspace $ws9 output HDMI-0
+workspace $ws10 output HDMI-0
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+Control+1 workspace $ws6
+bindsym $mod+Control+2 workspace $ws7
+bindsym $mod+Control+3 workspace $ws8
+bindsym $mod+Control+4 workspace $ws9
+bindsym $mod+Control+5 workspace $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Control+Shift+1 move container to workspace $ws6
+bindsym $mod+Control+Shift+2 move container to workspace $ws7
+bindsym $mod+Control+Shift+3 move container to workspace $ws8
+bindsym $mod+Control+Shift+4 move container to workspace $ws9
+bindsym $mod+Control+Shift+5 move container to workspace $ws10
+

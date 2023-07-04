@@ -1,0 +1,8 @@
+# class.                #border     #bg         #text       #indicator   #child_border
+client.focused          $mauve      $base       $text       $mauve       $mauve 
+client.focused_inactive $mauve      $mantle     $subtext2   $lavender    $lavender
+client.unfocused        $lavender   $mantle     $subtext2   $rosewater   $sapphire
+client.urgent           $red        $crust      $text       #900000      #900000
+client.placeholder      $lavender   $crust      $text       #000000      #0c0c0c
+
+client.background       $crust      $crust      $text       #000000      #0c0c0c

@@ -1,0 +1,35 @@
+#sleep 1
+exec --no-startup-id dbus-update-activation-environment --all
+exec --no-startup-id gnome-keyring-daemon --start --components=secrets
+
+exec --no-startup-id ~/.fehbg 
+
+#exec --no-startup-id export SSH_AUTH_SOCK
+
+exec --no-startup-id xrgb merge ~/.Xresources
+
+exec --no-startup-id setxkbmap -layout us -variant alt-intl
+
+exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
+
+exec --no-startup-id xclip
+exec --no-startup-id numlockx on
+exec --no-startup-id picom -b
+exec --no-startup-id eval ~/.scripts/startup-apps-$(cat /etc/hostname)
+exec --no-startup-id eval ~/.scripts/resolution-$(cat /etc/hostname)
+
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+# Start XDG autostart .desktop files using dex. See also
+# https://wiki.archlinux.org/index.php/XDG_Autostart
+#exec --no-startup-id dex --autostart --environment i3
+
+# The combination of xss-lock, nm-applet and pactl is a popular choice, so
+# they are included here as an example. Modify as you see fit.
+
+# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
+# screen before suspend. Use loginctl lock-session to lock your screen.
+#exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+# NetworkManager is the most popular way to manage wireless networks on Linux,
+# and nm-applet is a desktop environment-independent system tray GUI for it.
+#exec --no-startup-id nm-applet
