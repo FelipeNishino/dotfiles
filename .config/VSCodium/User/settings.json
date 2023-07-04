@@ -1,0 +1,36 @@
+{
+  "workbench.iconTheme": "eq-material-theme-icons",
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "editor.fontFamily": "CaskaydiaCove Nerd Font Mono",
+  "editor.fontSize": 16,
+  "editor.fontLigatures": true,
+  "telemetry.telemetryLevel": "off",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[java]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+  },
+  "lldb.library": "/usr/lib/swift/lib/liblldb.so",
+  "editor.inlayHints.enabled": "offUnlessPressed",
+  "clangd.arguments": [
+    "--header-insertion=never"
+  ],
+  "clang-format.language.apex.enable": false,
+  "clang-format.language.glsl.enable": false,
+  "clang-format.language.hlsl.enable": false,
+  "clang-format.language.javascript.enable": false,
+  "clang-format.language.java.enable": false,
+  "clang-format.language.objective-c.enable": false,
+  "clang-format.language.objective-cpp.enable": false,
+  "clang-format.language.proto.enable": false,
+  "clang-format.language.typescript.enable": false,
+  "clang-format.fallbackStyle": "",
+"editor.minimap.enabled": false,
+"editor.detectIndentation": false,
+"window.zoomLevel": 1
+}
