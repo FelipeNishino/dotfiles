@@ -1,0 +1,13 @@
+current=$(xrandr -q --verbose | grep $1 | sed 's/primary //' | awk '{print $5}')
+echo $current
+case $current in
+    normal)
+        xrandr --output $1 --rotate right;;
+    right)
+        xrandr --output $1 --rotate inverted;;
+    inverted)
+        xrandr --output $1 --rotate left;;
+    left)
+        xrandr --output $1 --rotate normal;;
+    *)
+esac
