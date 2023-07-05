@@ -3,7 +3,8 @@
 	[
 		"Vintage",
 	],
-	"theme": "Default Dark.sublime-theme",
-	"font_face": "Cascadia Code",
+	"theme": "Adaptive.sublime-theme",
+	"font_face": "CaskaydiaCove Nerd Font",
 	"font_size": 13,
+	"color_scheme": "Packages/Catppuccin/Catppuccin.tmTheme",
 }
