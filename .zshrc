@@ -3,7 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
+export ZSH_CUSTOM="/home/nishi/.config/nishi/zsh-custom"
 # Exports current host location
 export HOST_LOCATION=$(nmcli | grep "Intel I217-LM")
 

@@ -4,3 +4,12 @@
 [submodule ".config/sublime-text/Packages/Catppuccin"]
 	path = .config/sublime-text/Packages/Catppuccin
 	url = https://github.com/catppuccin/sublime-text
+[submodule ".config/nishi/zsh-custom/plugins/zsh-autosuggestions"]
+	path = .config/nishi/zsh-custom/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule ".config/nishi/zsh-custom/plugins/zsh-completions"]
+	path = .config/nishi/zsh-custom/plugins/zsh-completions
+	url = https://github.com/zsh-users/zsh-completions
+[submodule ".config/nishi/zsh-custom/plugins/zsh-syntax-highlighting"]
+	path = .config/nishi/zsh-custom/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
