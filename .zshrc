@@ -3,16 +3,17 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export ZSH_CUSTOM="/home/nishi/.config/nishi/zsh-custom"
 # Exports current host location
 export HOST_LOCATION=$(nmcli | grep "Intel I217-LM")
 
+export ZSH_CUSTOM="$HOME/.config/nishi/zsh-custom"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="garuda"
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -96,10 +97,6 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
-
-export EDITOR=${HOME}/.local/bin/lvim
-export VISUAL=${HOME}/.local/bin/lvim
-
 unsetopt autocd
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -110,7 +107,7 @@ unsetopt autocd
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
+alias zshconfig="$EDITOR ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias rel="xrdb merge ~/.Xresources && kill -USR1 $(pidof st)"
