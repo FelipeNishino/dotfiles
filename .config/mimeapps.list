@@ -1,0 +1,38 @@
+[Added Associations]
+application/x-extension-htm=firefox.desktop;
+application/x-extension-html=firefox.desktop;
+application/x-extension-shtml=firefox.desktop;
+application/x-extension-xht=firefox.desktop;
+application/x-extension-xhtml=firefox.desktop;
+application/xhtml+xml=firefox.desktop;
+text/html=firefox.desktop;
+x-scheme-handler/chrome=firefox.desktop;
+x-scheme-handler/http=firefox.desktop;
+x-scheme-handler/https=firefox.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-D2R4T1.desktop;
+
+[Default Applications]
+application/json=sublime_text.desktop;
+application/pdf=firefox.desktop;
+application/x-extension-htm=firefox.desktop;
+application/x-extension-html=firefox.desktop;
+application/x-extension-shtml=firefox.desktop;
+application/x-extension-xht=firefox.desktop;
+application/x-extension-xhtml=firefox.desktop;
+application/xhtml+xml=firefox.desktop;
+image/bmp=feh.desktop;
+image/gif=imv.desktop;
+image/jpeg=feh.desktop;
+image/png=feh.desktop;
+inode/directory=pcmanfm.desktop;
+text/html=firefox.desktop;
+text/plain=l3afpad.desktop;
+text/x-csrc=sublime_text.desktop;
+x-scheme-handler/about=firefox.desktop;
+x-scheme-handler/chrome=firefox.desktop;
+x-scheme-handler/discord-472164236332630018=discord-472164236332630018.desktop;
+x-scheme-handler/discord-668477264995811338=nuclear.desktop;
+x-scheme-handler/http=firefox.desktop;
+x-scheme-handler/https=firefox.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-D2R4T1.desktop;
+x-scheme-handler/unknown=firefox.desktop;

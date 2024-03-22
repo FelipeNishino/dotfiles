@@ -3,5 +3,4 @@ nextcloud &
 mullvad-vpn &
 bitwarden-desktop &
 flameshot &
-#qpwgraph -m ~/.pwgraph &
 qpwgraph -m &

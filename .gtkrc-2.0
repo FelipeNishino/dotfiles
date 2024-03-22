@@ -2,7 +2,7 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/nishi/.gtkrc-2.0.mine"
-gtk-theme-name="Catppuccin-Mocha-Standard-Mauve-dark"
+gtk-theme-name="Catppuccin-Mocha-Standard-Mauve-Dark"
 gtk-icon-theme-name="Adwaita"
 gtk-font-name="Ligconsolata 12"
 gtk-cursor-theme-name="Catppuccin-Mocha-Lavender-Cursors"
