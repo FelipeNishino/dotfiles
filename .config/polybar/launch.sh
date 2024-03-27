@@ -8,9 +8,16 @@ polybar-msg cmd quit
 
 echo "---" | tee -a /tmp/polybar.log
 #polybar 2>&1 | tee -a /tmp/polybar.log & disown
+export MONITOR
+export MODULES_R
+BASE_MODULES="eth filesystem pulseaudio memory cpu date "
 
-for m in $(polybar --list-monitors | cut -d":" -f1); do
-    MONITOR=$m polybar 2>&1 | tee -a /tmp/polybar.log & disown
+polybar --list-monitors | while read -r m
+do
+	MONITOR=$(echo $m | cut -d":" -f1)
+	MODULES_R=$BASE_MODULES
+    	echo $m | grep primary>/dev/null && MODULES_R="$MODULES_R tray"
+   	polybar 2>&1 | tee -a /tmp/polybar.log & disown
 done
 
 echo "Bars launched..."
