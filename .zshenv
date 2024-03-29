@@ -13,6 +13,6 @@ done
 
 . "$HOME/.cargo/env"
 
-export EDITOR="$HOME/.local/bin/lvim"
-export VISUAL="$HOME/.local/bin/lvim"
+export EDITOR="nvim"
+export VISUAL="nvim"
 
