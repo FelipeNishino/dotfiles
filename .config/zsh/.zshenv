@@ -15,4 +15,4 @@ done
 
 export EDITOR="nvim"
 export VISUAL="nvim"
-
+export USERVARS="$HOME/.config/user/.user-vars"
