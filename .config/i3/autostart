@@ -1,5 +1,4 @@
 #sleep 1
-
 exec --no-startup-id dbus-update-activation-environment --all
 
 exec --no-startup-id ~/.fehbg 
@@ -8,6 +7,7 @@ exec --no-startup-id ~/.fehbg
 
 exec --no-startup-id xrgb merge ~/.Xresources
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
+exec_always --no-startup-id "setxkbmap us -variant altgr-intl"
 
 exec --no-startup-id xclip
 exec --no-startup-id numlockx on
