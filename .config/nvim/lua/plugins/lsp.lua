@@ -107,7 +107,7 @@ return {
             end)
 
             require('mason-lspconfig').setup({
-                ensure_installed = { 'asm_lsp', 'bashls', 'clangd', 'html', 'hydra_lsp', 'jedi_language_server', 'jsonls', 'lemminx', 'ltex', 'lua_ls', 'rust_analyzer', 'taplo', 'tsserver' },
+                ensure_installed = { 'asm_lsp', 'bashls', 'clangd', 'html', 'hydra_lsp', 'jedi_language_server', 'jsonls', 'lemminx', 'lua_ls', 'rust_analyzer', 'taplo', 'tsserver' },
                 handlers = {
                     lsp_zero.default_setup,
                     lua_ls = function()
