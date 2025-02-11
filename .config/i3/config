@@ -38,3 +38,5 @@ include $local_config/keys
 include $local_config/workspaces
 
 include $local_config/modes
+
+include $local_config/rules
