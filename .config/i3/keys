@@ -5,9 +5,9 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.scripts/notify/change-volum
 bindsym XF86AudioLowerVolume exec --no-startup-id ~/.scripts/notify/change-volume down
 bindsym XF86AudioMute exec --no-startup-id ~/.scripts/notify/change-volume mute
 #bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-bindsym XF86AudioPlay exec --no-startup-id "playerctl --player=Lollypop,spotify,firefox play-pause"
-bindsym XF86AudioNext exec --no-startup-id "playerctl --player=Lollypop,spotify,firefox next"
-bindsym XF86AudioPrev exec --no-startup-id "playerctl --player=Lollypop,spotify,firefox previous"
+bindsym XF86AudioPlay exec --no-startup-id "playerctl --player=Lollypop,tauon,spotify,firefox play-pause"
+bindsym XF86AudioNext exec --no-startup-id "playerctl --player=Lollypop,tauon,spotify,firefox next"
+bindsym XF86AudioPrev exec --no-startup-id "playerctl --player=Lollypop,tauon,spotify,firefox previous"
 
 # Reload X resources
 bindsym $mod+Control+Shift+F5 exec --no-startup-id "playerctl --player=spotify,firefox previous"
