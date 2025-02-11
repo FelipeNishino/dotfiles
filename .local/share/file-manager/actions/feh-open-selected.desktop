@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Action
+Name=Open images in Feh
+Profiles=feh_opener
+Icon=feh
+
+[X-Action-Profile feh_opener]
+MimeTypes=image/bmp;image/jpeg;image/jpg;image/pjpeg;image/png;image/tiff;image/webp;image/x-bmp;image/x-pcx;image/x-png;image/x-portable-anymap;image/x-portable-bitmap;image/x-portable-graymap;image/x-portable-pixmap;image/x-tga;image/x-xbitmap;image/heic
+Exec=feh %F --scale-down --auto-zoom #--start-at
