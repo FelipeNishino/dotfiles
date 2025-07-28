@@ -23,20 +23,24 @@ function main() {
         *) abort "Couldn't match ostype, got <$OSTYPE>";;
     esac
     pdirs=$(ls -F "$ffdir" | grep "/$" | grep "\.af" | cut -f1 -d'/')
+    afproflist="$ffdir/afproflist.txt"
+    echo $pdirs > $afproflist
     afuserdir="$HOME/.config/user/arkenfox"
+    uandc="$afuserdir/updateAndClean.sh"
+    updater="$afuserdir/updater.sh"
+    cleaner="$afuserdir/prefsCleaner.sh"
     for pdir in $pdirs;
     do
         uov="$afuserdir/$(echo $pdir | cut -f2 -d'.').user-overrides.js"
-        updater="$afuserdir/updater.sh"
-        cleaner="$afuserdir/prefsCleaner.sh"
         #check_file($uov) && ln -s $uov ./$pdir/user-overrides.js
         #check_file $uov && echo "created link for useroverride"
         #check_file $updater && echo "created link for updater"
-        #check_file $cleaner && echo "created link for cleaner"
+        #check_file $cleaner && cp $cleaner "$ffdir/$pdir/prefsCleaner.sh"
+        check_file $cleaner && ln $cleaner "$ffdir/$pdir/prefsCleaner.sh"
         check_file $uov && ln -s $uov "$ffdir/$pdir/user-overrides.js"
-        #check_file $updater && ln -s $updater ./$pdir/updater.sh
-        #check_file $cleaner && ln -s $cleaner ./$pdir/prefsCleaner.sh
     done
+    check_file $updater && ln -s $updater "$ffdir/updater.sh"
+    check_file $uandc && ln -s $uandc "$ffdir/updateAndClean.sh"
 }
 
 main "$@"
