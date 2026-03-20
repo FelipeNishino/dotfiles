@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Action
+Name=Extract to */
+Profiles=unarchivetodir
+Icon=archive
+
+[X-Action-Profile unarchivetodir]
+MimeTypes=application/vnd.rar;application/zip;application/x-zip-compressed;application/x-7z-compressed
+Exec=extract_files_to_dir %F

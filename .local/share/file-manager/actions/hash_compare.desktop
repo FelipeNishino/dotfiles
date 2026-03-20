@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Action
+Name=Compare hashes
+Profiles=hashcompare
+Icon=code
+
+[X-Action-Profile hashcompare]
+#MimeTypes=audio/*;application/*;font/*;image/*;text/*;video/*
+Exec=hash_compare %F

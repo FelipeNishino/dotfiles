@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Action
+Name=Compress files here
+Profiles=compresshere
+Icon=archive
+
+[X-Action-Profile compresshere]
+#MimeTypes=inode/directory;audio/*;application/*;font/*;image/*;text/*;video/*
+Exec=compress_files_here %F
