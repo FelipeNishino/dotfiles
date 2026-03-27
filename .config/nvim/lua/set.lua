@@ -10,6 +10,7 @@ vim.opt.smartindent = true
 
 vim.opt.incsearch = true
 
+-- Used by nvim-notify and maybe other things
 vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8

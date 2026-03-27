@@ -9,6 +9,5 @@ return {
     vim.g.vimtex_compiler_latexmk = {
         aux_dir = homefolder .. "/.cache/vimtex/latexmk/aux",
     }
-
   end
 }
