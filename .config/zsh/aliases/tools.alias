@@ -1,0 +1,14 @@
+# Tools
+
+alias rel="xrdb merge ~/.Xresources && kill -USR1 $(pidof st)"
+alias reldwmblocks="pkill -RTMIN+10 dwmblocks"
+alias valg="valgrind --leak-check=full --show-leak-kinds=all -v --track-origins=yes"
+alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+alias vscode="codium"
+alias vban_android="vban_emitter -i 192.168.0.24 -p 6980 -s Stream1 -l3 -b alsa"
+alias mingw-gcc="x86_64-w64-mingw32-gcc"
+alias lazydots="lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+alias yt-dlp-audio="yt-dlp --prefer-ffmpeg -x --audio-quality 0 --embed-thumbnail"
+alias yt-dlp-archive="yt-dlp --embed-metadata --embed-thumbnail --embed-subs --all-subs -o \"[%(upload_date)s|YT|%(id)s] %(title)s.%(ext)s\""
+
+

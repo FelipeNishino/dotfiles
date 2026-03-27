@@ -1,0 +1,10 @@
+# Config
+alias shconf="$EDITOR $ZDOTDIR/.zshrc"
+alias myconf="$EDITOR $HOME/.config"
+alias nvconf="$EDITOR $HOME/.config/nvim/"
+alias wmconf="$EDITOR $HOME/.config/i3/"
+alias myscripts="$EDITOR $HOME/.config/user/scripts/"
+
+# Common
+alias shhist="cat $HISTFILE | less"
+

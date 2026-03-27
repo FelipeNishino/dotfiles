@@ -4,17 +4,23 @@
 ANTDIR="$ZDOTDIR/.antidote"
 
 # History config
-HISTFILE=~/.config/zsh/.zsh_history
+HISTFILE="$XDG_STATE_HOME"/zsh/.zsh_history
 HISTSIZE=50000
 SAVEHIST=10000
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=8"
 
-# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+# User variables
+ZSH_ALIASES_DIR="$ZDOTDIR/aliases"
+ZSH_PROMPTS_DIR="$ZDOTDIR/prompts"
+ZSH_THEMES_DIR="$ZDOTDIR/themes"
+
+#"-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 # Options
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 setopt promptsubst
 unsetopt autocd beep
+setopt nobanghist
 
 # Use emacs keybindings
 bindkey -e
@@ -25,12 +31,12 @@ bindkey -e
 zstyle :compinstall filename '$HOME/.config/zsh/.zshrc'
 
 autoload -Uz compinit
-compinit
+compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION" 
 
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 # Prompt
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-fpath=("$ZDOTDIR/prompts" "$fpath[@]")
+fpath=("$ZSH_PROMPTS_DIR" "$fpath[@]")
 
 autoload -Uz promptinit
 promptinit
@@ -50,6 +56,9 @@ antidote load
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# Load nvm
+source /usr/share/nvm/init-nvm.sh
 
 # Color and keybindings not used because of omz libs 
 
@@ -114,19 +123,25 @@ eval "$(pyenv init -)"
 #fi
 
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+# Fixes
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+# https://github.com/zsh-users/zsh-autosuggestions/issues/747#issuecomment-2381387063
+# Fix invalid suggestion when using completions
+menu-select-wrap() {
+zle menu-select
+}
+zle -N menu-select-wrap
+
+bindkey              '^I' menu-select-wrap
+bindkey "$terminfo[kcbt]" menu-select-wrap
+bindkey -M menuselect              '^I'         menu-complete
+bindkey -M menuselect "$terminfo[kcbt]" reverse-menu-complete
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 # Aliases
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-alias zshconf="$EDITOR $ZDOTDIR/.zshrc"
-alias rel="xrdb merge ~/.Xresources && kill -USR1 $(pidof st)"
-alias reldwmblocks="pkill -RTMIN+10 dwmblocks"
-alias update-keyring="sudo pacman -S archlinux-keyring"
-alias valg="valgrind --leak-check=full --show-leak-kinds=all -v --track-origins=yes"
-alias syu="sudo pacman -Syu"
-alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
-alias code="codium"
-alias vban_android="vban_emitter -i 192.168.0.24 -p 6980 -s Stream1 -l3 -b alsa"
-alias mingw-gcc="x86_64-w64-mingw32-gcc"
-alias myconf="cd $HOME/.config"
-alias lazydots="lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME"
-alias nvconf="nvim $HOME/.config/nvim/"
-alias yt-dlp-mp3="yt-dlp --prefer-ffmpeg -x --audio-format mp3 --audio-quality 0 --embed-thumbnail"
+
+source "$ZSH_ALIASES_DIR/common.alias"
+source "$ZSH_ALIASES_DIR/$(hostname).alias"
+

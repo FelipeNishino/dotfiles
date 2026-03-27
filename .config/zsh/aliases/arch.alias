@@ -1,0 +1,11 @@
+# Arch
+alias update-keyring="sudo pacman -S archlinux-keyring"
+alias syu="sudo pacman -Syu"
+alias viewpkgs="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
+
+# XDG compatibility aliases
+alias adb='HOME="$XDG_DATA_HOME"/android adb'
+alias nvidia-settings='nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/nvidia-settings-rc'
+alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME"/yarn/config'
+
+
