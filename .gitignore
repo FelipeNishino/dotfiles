@@ -1,0 +1,12 @@
+/*/
+/*
+!/.*
+!/.config/
+/.config/BraveSoftware
+/.config/Electron
+/.config/FreeCAD
+/.config/FreeTube
+/.config/Mullvad\ VPN
+/.config/Nextcloud
+!/.local/
+/.local/state/
