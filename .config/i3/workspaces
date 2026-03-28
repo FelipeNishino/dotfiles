@@ -10,6 +10,7 @@ set $ws7 "aux_browser"
 set $ws8 "music"
 set $ws9 "9"
 set $ws10 "10"
+set $ws11 "11"
 
 workspace $ws1 output DP-0
 workspace $ws2 output DP-0

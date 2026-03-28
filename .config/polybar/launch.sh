@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/sh
 
 # Terminate already running bar instances
 # If all your bars have ipc enabled, you can use 
@@ -10,13 +10,13 @@ echo "---" | tee -a /tmp/polybar.log
 #polybar 2>&1 | tee -a /tmp/polybar.log & disown
 export MONITOR
 export MODULES_R
-BASE_MODULES="eth filesystem pulseaudio memory cpu date "
+BASE_MODULES="pulseaudio memory date"
 
 polybar --list-monitors | while read -r m
 do
-	MONITOR=$(echo $m | cut -d":" -f1)
+	MONITOR=$(echo "$m" | cut -d":" -f1)
 	MODULES_R=$BASE_MODULES
-    	echo $m | grep primary>/dev/null && MODULES_R="$MODULES_R tray"
+    	echo "$m" | grep primary>/dev/null && MODULES_R="eth filesystem pulseaudio memory cpu date tray"
    	polybar 2>&1 | tee -a /tmp/polybar.log & disown
 done
 

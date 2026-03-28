@@ -1,9 +1,9 @@
 # General keybindings
 
 # Use pactl to adjust volume in PulseAudio.
-bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.scripts/notify/change-volume up
-bindsym XF86AudioLowerVolume exec --no-startup-id ~/.scripts/notify/change-volume down
-bindsym XF86AudioMute exec --no-startup-id ~/.scripts/notify/change-volume mute
+bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.config/user/scripts/notify/change-volume up
+bindsym XF86AudioLowerVolume exec --no-startup-id ~/.config/user/scripts/notify/change-volume down
+bindsym XF86AudioMute exec --no-startup-id ~/.config/user/scripts/notify/change-volume mute
 #bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 bindsym XF86AudioPlay exec --no-startup-id "playerctl --player=Lollypop,tauon,spotify,firefox play-pause"
 bindsym XF86AudioNext exec --no-startup-id "playerctl --player=Lollypop,tauon,spotify,firefox next"
@@ -16,8 +16,8 @@ bindsym Print exec --no-startup-id "flameshot gui"
 bindsym Shift+Print exec --no-startup-id "flameshot screen"
 bindsym Control+Shift+Print exec --no-startup-id "flameshot full"
 # start a terminal
-bindsym $mod+Shift+Return exec alacritty
+bindsym $mod+Return exec alacritty
 
 # start program launcher
-bindsym $mod+Shift+d exec "~/.config/rofi/scripts/appsmenu"
+bindsym $mod+d exec "~/.config/rofi/scripts/appsmenu"
 
