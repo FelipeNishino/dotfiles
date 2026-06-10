@@ -3,7 +3,7 @@ return {
         "mason-org/mason-lspconfig.nvim",
         -- Mason lspconfig automatically installs and enables the following lsps
         opts = {
-            ensure_installed = { 'asm_lsp', 'bashls', 'clangd', 'html', 'hydra_lsp', 'jedi_language_server', 'jsonls', 'lemminx', 'lua_ls', 'rust_analyzer', 'taplo' },
+            ensure_installed = { 'angularls', 'asm_lsp', 'bashls', 'clangd', 'html', 'hydra_lsp', 'jedi_language_server', 'jsonls', 'lemminx', 'lua_ls', 'rust_analyzer', 'taplo' },
         },
         dependencies = {
             -- Load Mason lsp downloader before configurator

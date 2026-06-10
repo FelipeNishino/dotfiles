@@ -1,3 +1,4 @@
+--[[
 vim.api.nvim_create_autocmd("FileType", {
     pattern = "zsh",
     callback = function()
@@ -5,6 +6,7 @@ vim.api.nvim_create_autocmd("FileType", {
         require("nvim-treesitter.highlight").attach(0, "bash")
     end,
 })
+]]
 
 vim.api.nvim_create_autocmd("BufEnter", {
     pattern = "$HOME/.config/i3/*",
