@@ -5,4 +5,4 @@ alias viewpkgs="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --b
 
 source "$ZSH_ALIASES_DIR/arch.alias"
 source "$ZSH_ALIASES_DIR/tools.alias"
-
+source "$ZSH_ALIASES_DIR/containers.alias"

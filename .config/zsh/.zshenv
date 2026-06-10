@@ -3,6 +3,10 @@ pathdirs+=("$HOME/.local/bin")
 pathdirs+=('/usr/local/opt/qt@5/bin')
 pathdirs+=("$HOME/Library/Python/3.9/bin")
 
+# Dotnet - UNSUPPORTED
+#export DOTNET_CLI_HOME="$XDG_DATA_HOME"/dotnet
+#pathdirs+=("$DOTNET_CLI_HOME/tools")
+
 typeset -U path PATH
 
 for dir in $pathdirs; do
@@ -22,6 +26,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 
+export SSL_CERT_DIR=$HOME/.aspnet/dev-certs/trust:/etc/ssl/certs
 export ANDROID_USER_HOME="$XDG_DATA_HOME"/android
 export AWS_SHARED_CREDENTIALS_FILE="$XDG_CONFIG_HOME"/aws/credentials
 export AWS_CONFIG_FILE="$XDG_CONFIG_HOME"/aws/config
@@ -29,7 +34,6 @@ export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
 export MACHINE_STORAGE_PATH="$XDG_DATA_HOME"/docker-machine
-export DOTNET_CLI_HOME="$XDG_DATA_HOME"/dotnet
 export ELECTRUMDIR="$XDG_DATA_HOME/electrum"
 # Elixir
 export MIX_XDG="true"
@@ -41,7 +45,11 @@ export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc":"$XDG_CONFIG_HOME/gtk-2.0/
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 export MAVEN_OPTS=-Dmaven.repo.local="$XDG_DATA_HOME"/maven/repository
 export MAVEN_ARGS="--settings $XDG_CONFIG_HOME/maven/settings.xml"
+
+# NPM
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
+export npm_config_prefix="$HOME/.local"
+
 export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages
 export NVM_DIR="$XDG_DATA_HOME"/nvm 
 export PHP_HISTFILE="$XDG_STATE_HOME"/php/history

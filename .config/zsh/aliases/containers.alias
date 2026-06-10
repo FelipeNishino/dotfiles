@@ -1,0 +1,4 @@
+# Docker
+alias dcompup="sudo docker compose up"
+alias dcompupd="sudo docker compose up -d"
+alias dcompdown="sudo docker compose down"

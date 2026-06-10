@@ -53,7 +53,6 @@ antidote load
 # Tools
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 # Pyenv setup
-export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
@@ -144,4 +143,3 @@ bindkey -M menuselect "$terminfo[kcbt]" reverse-menu-complete
 
 source "$ZSH_ALIASES_DIR/common.alias"
 source "$ZSH_ALIASES_DIR/$(hostname).alias"
-

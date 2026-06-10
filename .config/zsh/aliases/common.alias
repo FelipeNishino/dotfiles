@@ -1,5 +1,6 @@
 # Config
 alias shconf="$EDITOR $ZDOTDIR/.zshrc"
+alias shenv="$EDITOR $ZDOTDIR/.zshenv"
 alias myconf="$EDITOR $HOME/.config"
 alias nvconf="$EDITOR $HOME/.config/nvim/"
 alias wmconf="$EDITOR $HOME/.config/i3/"

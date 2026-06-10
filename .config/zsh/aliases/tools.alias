@@ -8,7 +8,9 @@ alias vscode="codium"
 alias vban_android="vban_emitter -i 192.168.0.24 -p 6980 -s Stream1 -l3 -b alsa"
 alias mingw-gcc="x86_64-w64-mingw32-gcc"
 alias lazydots="lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME"
-alias yt-dlp-audio="yt-dlp --prefer-ffmpeg -x --audio-quality 0 --embed-thumbnail"
+alias yt-dlp-audio="yt-dlp -x --audio-quality 0 --embed-thumbnail -o \"%(channel)s - %(title)s - %(upload_date)s.YT.%(id)s\""
 alias yt-dlp-archive="yt-dlp --embed-metadata --embed-thumbnail --embed-subs --all-subs -o \"[%(upload_date)s|YT|%(id)s] %(title)s.%(ext)s\""
+alias yt-dlp-tor="yt-dlp --proxy socks5://localhost:9150 -o \"%(id)s.%(ext)s\""
+
 
 
