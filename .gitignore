@@ -10,3 +10,5 @@
 /.config/Nextcloud
 !/.local/
 /.local/state/
+*.DS_Store
+*/desktop.ini
