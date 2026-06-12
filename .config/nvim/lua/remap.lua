@@ -43,6 +43,7 @@ vim.keymap.set("v", "<leader>s", [["hy:%s/<C-r>h//g<left><left>]])
 -- Make current file executable
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
+-- NOT Disabled because of mini.surround
 -- Balanced symbols by Adriano_Pinaffo at
 -- Close brackets automatically, with return
 vim.keymap.set("i", "{<CR>", "{<cr>}<C-O><S-O>")
@@ -55,7 +56,23 @@ vim.keymap.set("i", "[", "[]<left>")
 -- Two cases below are covered by inoremap <exp>
 vim.keymap.set("i", "\"", "\"\"<left>")
 vim.keymap.set("i", "'", "''<left>")
--- If you close a bracket that is already closed, it overwrites
+vim.keymap.set("i", "`", "``<left>")
+
+-- Do not add balanced symbols when followed by <Backspace>
+vim.keymap.set("i", "(<Backspace>", "(")
+vim.keymap.set("i", "{<Backspace>", "{")
+vim.keymap.set("i", "[<Backspace>", "[")
+vim.keymap.set("i", "\"<Backspace>", "\"")
+vim.keymap.set("i", "'<Backspace>", "'")
+vim.keymap.set("i", "`<Backspace>", "`")
+-- Skip ahead symbols with <Tab>
+vim.keymap.set("i", "(<Tab>", "()")
+vim.keymap.set("i", "{<Tab>", "{}")
+vim.keymap.set("i", "[<Tab>", "[]")
+vim.keymap.set("i", "\"<Tab>", "\"\"")
+vim.keymap.set("i", "'<Tab>", "''")
+vim.keymap.set("i", "`<Tab>", "``")
+--- If you close a bracket that is already closed, it overwrites
 -- vim.keymap.set("i", "<expr> )", "strpart(getline('.'), col('.')-1, 1) == \")\" ? \"\\<Right>\" : \")\"")
 -- vim.keymap.set("i", "<expr> }", "strpart(getline('.'), col('.')-1, 1) == \"}\" ? \"\\<Right>\" : \"}\"")
 -- vim.keymap.set("i", "<expr> ]", "strpart(getline('.'), col('.')-1, 1) == \"]\" ? \"\\<Right>\" : \"]\"")
@@ -73,3 +90,4 @@ vim.keymap.set("i", "'", "''<left>")
 -- vim.keymap.set("v", "<C-S-9>", "<Esc>`<i(<Esc>`>a<right>)<Esc>")
 -- vim.keymap.set("v", "<C-{>", "<Esc>`<i{<Esc>`>a<right>}<Esc>")
 -- vim.keymap.set("v", "<C-[>", "<Esc>`<i[<Esc>`>a<right>]<Esc>")
+
