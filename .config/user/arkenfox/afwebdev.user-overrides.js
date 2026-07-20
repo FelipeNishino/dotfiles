@@ -1,4 +1,4 @@
-// af version 122
+// afbr version 122
 
 // 0403: Overriden as per wiki's "override if you do not understand the consequences"
 // user_pref("browser.safebrowsing.downloads.remote.enabled", true);
@@ -20,8 +20,6 @@ user_pref("privacy.resistFingerprinting", true);
 user_pref("privacy.resistFingerprinting.letterboxing", true); // optional
 user_pref("webgl.disabled", true); // optional
 
-// Spoof language to en-US even when OS language is diff, as per thorin
-user_pref("privacy.spoof_english", 2); // optional
 
 /* 5021: disable location bar using search
  * Don't leak URL typos to a search engine, give an error message instead
@@ -29,5 +27,3 @@ user_pref("privacy.spoof_english", 2); // optional
  * [NOTE] This does not affect explicit user action such as using search buttons in the
  * dropdown, or using keyword search shortcuts you configure in options (e.g. "d" for DuckDuckGo) ***/
 user_pref("keyword.enabled", false);
-
-

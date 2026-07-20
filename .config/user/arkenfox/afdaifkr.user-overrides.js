@@ -19,3 +19,11 @@
 user_pref("privacy.resistFingerprinting", true);
 user_pref("privacy.resistFingerprinting.letterboxing", true); // optional
 user_pref("webgl.disabled", true); // optional
+
+/* 5021: disable location bar using search
+ * Don't leak URL typos to a search engine, give an error message instead
+ * Examples: "secretplace,com", "secretplace/com", "secretplace com", "secret place.com"
+ * [NOTE] This does not affect explicit user action such as using search buttons in the
+ * dropdown, or using keyword search shortcuts you configure in options (e.g. "d" for DuckDuckGo) ***/
+user_pref("keyword.enabled", false);
+
