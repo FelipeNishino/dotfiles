@@ -1,0 +1,166 @@
+        {
+            "border": "pixel",
+            "floating": "auto_off",
+            "layout": "tabbed",
+            "marks": [],
+            "percent": null,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "pixel",
+                    "floating": "auto_off",
+                    "layout": "stacked",
+                    "marks": [],
+                    "percent": 0.333333333333333,
+                    "type": "con",
+                    "nodes": [
+                        {
+                            "border": "pixel",
+                            "current_border_width": 0,
+                            "floating": "auto_off",
+                            "geometry": {
+                                "height": 600,
+                                "width": 800,
+                                "x": 0,
+                                "y": 0
+                            },
+                            "marks": [],
+                            "name": "nvim .",
+                            "percent": 0.5,
+                            "swallows": [
+                                {
+                                    "class": "^Alacritty$",
+                                    "instance": "^nvim-coding$"
+                                }
+                            ],
+                            "type": "con"
+                        },
+                        {
+                            "border": "pixel",
+                            "current_border_width": 0,
+                            "floating": "auto_off",
+                            "geometry": {
+                                "height": 600,
+                                "width": 800,
+                                "x": 0,
+                                "y": 0
+                            },
+                            "marks": [],
+                            "name": "lazygit",
+                            "percent": 0.5,
+                            "swallows": [
+                                {
+                                    "class": "^Alacritty$",
+                                    "instance": "^lazygit$"
+                                }
+                            ],
+                            "type": "con"
+                        }
+                    ]
+                },
+                {
+                    "border": "pixel",
+                    "current_border_width": 0,
+                    "floating": "auto_off",
+                    "geometry": {
+                        "height": 1014,
+                        "width": 1600,
+                        "x": 0,
+                        "y": 0
+                    },
+                    "marks": [],
+                    "name": "(30) Inbox | daifukurousoft@proton.me | Proton Mail — Mozilla Firefox",
+                    "percent": 0.333333333333333,
+                    "swallows": [
+                        {
+                            "class": "^arkenfox-daifkr$",
+                            "instance": "^Navigator$"
+                        }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "pixel",
+                    "floating": "auto_off",
+                    "layout": "splitv",
+                    "marks": [],
+                    "percent": 0.333333333333333,
+                    "type": "con",
+                    "nodes": [
+                        {
+                            "border": "pixel",
+                            "floating": "auto_off",
+                            "layout": "splith",
+                            "marks": [],
+                            "percent": 0.607894736842105,
+                            "type": "con",
+                            "nodes": [
+                                {
+                                    "border": "pixel",
+                                    "current_border_width": 0,
+                                    "floating": "auto_off",
+                                    "geometry": {
+                                        "height": 600,
+                                        "width": 800,
+                                        "x": 0,
+                                        "y": 0
+                                    },
+                                    "marks": [],
+                                    "name": "npm start",
+                                    "percent": 0.5,
+                                    "swallows": [
+                                        {
+                                            "class": "^Alacritty$",
+                                            "instance": "^frontend-runner$"
+                                        }
+                                    ],
+                                    "type": "con"
+                                },
+                                {
+                                    "border": "pixel",
+                                    "current_border_width": 0,
+                                    "floating": "auto_off",
+                                    "geometry": {
+                                        "height": 600,
+                                        "width": 800,
+                                        "x": 0,
+                                        "y": 0
+                                    },
+                                    "marks": [],
+                                    "name": "dotnet run --launch-profile \"http\"",
+                                    "percent": 0.5,
+                                    "swallows": [
+                                        {
+                                            "class": "^Alacritty$",
+                                            "instance": "^backend-runner$"
+                                        }
+                                    ],
+                                    "type": "con"
+                                }
+                            ]
+                        },
+                        {
+                            "border": "pixel",
+                            "current_border_width": 0,
+                            "floating": "auto_off",
+                            "geometry": {
+                                "height": 600,
+                                "width": 800,
+                                "x": 0,
+                                "y": 0
+                            },
+                            "marks": [],
+                            "name": "nishi@tenko:~/Projects/FractalData/FractalSated/FractalSated",
+                            "percent": 0.392105263157895,
+                            "swallows": [
+                                {
+                                    "class": "^Alacritty$",
+                                    "instance": "^project-term$"
+                                }
+                            ],
+                            "type": "con"
+                        }
+                    ]
+                }
+            ]
+        }

@@ -12,3 +12,4 @@
 /.local/state/
 *.DS_Store
 */desktop.ini
+/.config/nvim/lazy-lock.json
